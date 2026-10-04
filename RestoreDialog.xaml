@@ -5,13 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:RemnantSaveManager"
         mc:Ignorable="d"
-        Title="Restore Backup" Height="131.476" Width="589.909" ResizeMode="CanMinimize" WindowStartupLocation="CenterOwner" Icon="Resources/Undo_32x.png">
+        Title="Восстановить резервную копию" Height="190" Width="680" ResizeMode="CanMinimize" WindowStartupLocation="CenterOwner" Icon="Resources/Undo_32x.png">
     <Grid Background="#FF4B4B4B">
-        <Button Name="btnCharacter" Content="Character" Margin="151,55,0,10" HorizontalAlignment="Left" Width="125" Click="btnCharacter_Click"/>
-        <Button Name="btnWorld" Content="World" HorizontalAlignment="Left" Margin="281,55,0,10" Width="125" Click="btnWorld_Click"/>
-        <Button Name="btnCancel" Content="Cancel" Margin="0,55,10,10" HorizontalAlignment="Right" Width="95" IsCancel="True"/>
-        <Label Name="txtSave" Content="Label" HorizontalAlignment="Left" Margin="10,10,0,0" RenderTransformOrigin="0.07,0.089" Width="564" Height="40" VerticalAlignment="Top" Background="{x:Null}" Foreground="White"/>
-        <Button x:Name="btnAll" Content="Everything" Margin="10,55,0,10" HorizontalAlignment="Left" Width="125" Click="btnAll_Click"/>
+        <Button Name="btnCharacter" Content="Персонаж" Margin="151,100,0,10" HorizontalAlignment="Left" Width="125" Click="btnCharacter_Click"/>
+        <Button Name="btnWorld" Content="Мир" HorizontalAlignment="Left" Margin="281,100,0,10" Width="125" Click="btnWorld_Click"/>
+        <Button Name="btnCancel" Content="Отмена" Margin="0,100,10,10" HorizontalAlignment="Right" Width="95" IsCancel="True"/>
+        <Label Name="txtSave" Content="" HorizontalAlignment="Left" Margin="10,10,0,0" RenderTransformOrigin="0.07,0.089" Height="75" VerticalAlignment="Top" Background="{x:Null}" Foreground="White">
+            <Label.ContentTemplate><DataTemplate><TextBlock Text="{Binding}" TextWrapping="Wrap"/></DataTemplate></Label.ContentTemplate>
+        </Label>
+        <Button x:Name="btnAll" Content="Всё" Margin="10,100,0,10" HorizontalAlignment="Left" Width="125" Click="btnAll_Click"/>
 
     </Grid>
 </Window>

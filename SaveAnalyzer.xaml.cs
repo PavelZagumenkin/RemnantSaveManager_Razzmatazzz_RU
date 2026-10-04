@@ -62,7 +62,7 @@ namespace RemnantSaveManager
             dgAdventure.ColumnHeaderStyle = new Style(typeof(DataGridColumnHeader));
             dgAdventure.ColumnHeaderStyle.Setters.Add(new Setter(DataGridColumnHeader.BackgroundProperty, new SolidColorBrush(analyzerColor.headerBackgroundColor)));
 
-            lblCredits.Content = "Thanks to /u/hzla00 for the original online implementation.\n\nLots of code used here was adapted from his original javascript (as was the styling!).";
+            lblCredits.Content = "Спасибо /u/hzla00 за исходный онлайн-анализатор.\n\nМногие фрагменты кода и оформление основаны на его версии на JavaScript.";
 
             txtMissingItems.BorderThickness = new Thickness(0);
 
@@ -75,26 +75,26 @@ namespace RemnantSaveManager
             lblCredits.FontSize = sliderSize.Value;
             initialized = true;
             TreeViewItem nodeNormal = new TreeViewItem();
-            nodeNormal.Header = "Normal";
+            nodeNormal.Header = Localization.Text("Normal");
             nodeNormal.Foreground = treeMissingItems.Foreground;
             nodeNormal.IsExpanded = Properties.Settings.Default.NormalExpanded;
             nodeNormal.Expanded += GameType_CollapsedExpanded;
             nodeNormal.Collapsed += GameType_CollapsedExpanded;
-            nodeNormal.Tag = "mode";
+            nodeNormal.Tag = RemnantItem.RemnantItemMode.Normal;
             TreeViewItem nodeHardcore = new TreeViewItem();
-            nodeHardcore.Header = "Hardcore";
+            nodeHardcore.Header = Localization.Text("Hardcore");
             nodeHardcore.Foreground = treeMissingItems.Foreground;
             nodeHardcore.IsExpanded = Properties.Settings.Default.HardcoreExpanded;
             nodeHardcore.Expanded += GameType_CollapsedExpanded;
             nodeHardcore.Collapsed += GameType_CollapsedExpanded;
-            nodeHardcore.Tag = "mode";
+            nodeHardcore.Tag = RemnantItem.RemnantItemMode.Hardcore;
             TreeViewItem nodeSurvival = new TreeViewItem();
-            nodeSurvival.Header = "Survival";
+            nodeSurvival.Header = Localization.Text("Survival");
             nodeSurvival.Foreground = treeMissingItems.Foreground;
             nodeSurvival.IsExpanded = Properties.Settings.Default.SurvivalExpanded;
             nodeSurvival.Expanded += GameType_CollapsedExpanded;
             nodeSurvival.Collapsed += GameType_CollapsedExpanded;
-            nodeSurvival.Tag = "mode";
+            nodeSurvival.Tag = RemnantItem.RemnantItemMode.Survival;
             treeMissingItems.Items.Add(nodeNormal);
             treeMissingItems.Items.Add(nodeHardcore);
             treeMissingItems.Items.Add(nodeSurvival);
@@ -103,14 +103,14 @@ namespace RemnantSaveManager
         private void GameType_CollapsedExpanded(object sender, RoutedEventArgs e)
         {
             TreeViewItem modeItem = (TreeViewItem)sender;
-            if (modeItem.Header.ToString().Contains("Normal")) {
+            if ((RemnantItem.RemnantItemMode)modeItem.Tag == RemnantItem.RemnantItemMode.Normal) {
                 Properties.Settings.Default.NormalExpanded = modeItem.IsExpanded;
             }
-            else if (modeItem.Header.ToString().Contains("Hardcore"))
+            else if ((RemnantItem.RemnantItemMode)modeItem.Tag == RemnantItem.RemnantItemMode.Hardcore)
             {
                 Properties.Settings.Default.HardcoreExpanded = modeItem.IsExpanded;
             }
-            else if (modeItem.Header.ToString().Contains("Survival"))
+            else if ((RemnantItem.RemnantItemMode)modeItem.Tag == RemnantItem.RemnantItemMode.Survival)
             {
                 Properties.Settings.Default.SurvivalExpanded = modeItem.IsExpanded;
             }
@@ -171,7 +171,7 @@ namespace RemnantSaveManager
                     if (!rItem.ItemNotes.Equals("")) item.ToolTip = rItem.ItemNotes;
                     item.Foreground = treeMissingItems.Foreground;
                     item.ContextMenu = this.treeMissingItems.Resources["ItemContext"] as System.Windows.Controls.ContextMenu;
-                    item.Tag = "item";
+                    item.Tag = rItem;
                     TreeViewItem modeNode = ((TreeViewItem)treeMissingItems.Items[(int)rItem.ItemMode]);
                     TreeViewItem itemTypeNode = null;
                     foreach (TreeViewItem typeNode in modeNode.Items)
@@ -232,7 +232,7 @@ namespace RemnantSaveManager
             //e.Column.CellStyle.Setters.Add(new Setter(DataGridCell.BorderThicknessProperty, new Thickness(1)));
             if (e.Column.Header.Equals("MissingItems"))
             {
-                e.Column.Header = "Missing Items";
+                e.Column.Header = "Недостающие предметы";
                 e.Column.CellStyle.Setters.Add(new Setter(DataGridCell.FontSizeProperty, ((fontSize / 3) * 2)));
                 if (Properties.Settings.Default.MissingItemColor.Equals("Red"))
                 {
@@ -248,7 +248,7 @@ namespace RemnantSaveManager
                     e.Cancel = true;
                     return;
                 }
-                e.Column.Header = "All Items";
+                e.Column.Header = "Все предметы";
                 e.Column.CellStyle.Setters.Add(new Setter(DataGridCell.FontSizeProperty, ((fontSize / 3) * 2)));
                 if (Properties.Settings.Default.MissingItemColor.Equals("Red"))
                 {
@@ -264,6 +264,9 @@ namespace RemnantSaveManager
                 e.Column.CellStyle.Setters.Add(new Setter(DataGridCell.FontSizeProperty, fontSize));
                 e.Column.CellStyle.Setters.Add(new Setter(DataGridCell.ForegroundProperty, new SolidColorBrush(analyzerColor.textColor)));
             }
+
+            if (e.PropertyName == "Location" || e.PropertyName == "Name" || e.PropertyName == "Type")
+                e.Column.Header = Localization.Text(e.PropertyName);
 
             /*DataGrid dg = (DataGrid)sender;
             if (columnWidths[dg.Name].ContainsKey(e.Column.Header.ToString()))
@@ -364,7 +367,7 @@ namespace RemnantSaveManager
                             sw.Write(ExportCredits());
                             break;
                         default:
-                            throw new Exception("Tab does not exist");
+                            throw new Exception("Вкладка не найдена");
                     }
                 }
             }
@@ -375,7 +378,7 @@ namespace RemnantSaveManager
             StringBuilder sb = new StringBuilder();
             if (string.IsNullOrEmpty(items))
             {
-                sb.AppendLine($"- **{header}** - None");
+                sb.AppendLine($"- **{header}** — Нет");
             }
             else
             {
@@ -394,11 +397,11 @@ namespace RemnantSaveManager
             foreach(RemnantWorldEvent eItem in events)
             {
                 sb.AppendLine($"##### {eItem.Name}");
-                sb.AppendLine($"- **Type** - {eItem.Type}");
-                sb.Append(FormatItems("Missing Items", eItem.MissingItems));
+                sb.AppendLine($"- **Тип** — {eItem.Type}");
+                sb.Append(FormatItems("Недостающие предметы", eItem.MissingItems));
                 if (Properties.Settings.Default.ShowPossibleItems)
                 {
-                    sb.Append(FormatItems("Possible Items", eItem.PossibleItems));
+                    sb.Append(FormatItems("Возможные предметы", eItem.PossibleItems));
                 }
             }
             return sb.ToString();
@@ -433,7 +436,7 @@ namespace RemnantSaveManager
             StringBuilder sb = new StringBuilder();
             foreach(var mode in listCharacters[cmbCharacter.SelectedIndex].GetMissingItems().GroupBy(x => x.ItemMode))
             {
-                sb.AppendLine($"## {mode.Key}");
+                sb.AppendLine($"## {Localization.Text(mode.Key.ToString())}");
                 foreach(var type in mode.GroupBy(x=> x.ItemType))
                 {
                     sb.AppendLine($"- {type.Key}");
@@ -474,15 +477,15 @@ namespace RemnantSaveManager
                     Clipboard.SetText(ExportCredits());
                     break;
                 default:
-                    throw new Exception("Tab does not exist");
+                    throw new Exception("Вкладка не найдена");
             }
 
-            MessageBox.Show("Content copied.");
+            MessageBox.Show("Содержимое скопировано.");
         }
 
         private string GetTreeItem(TreeViewItem item)
         {
-            if ((string)item.Tag == "item") return item.Header.ToString();
+            if (item.Tag is RemnantItem) return item.Header.ToString();
             StringBuilder sb = new StringBuilder();
             sb.AppendLine(item.Header.ToString() + ":");
             foreach (TreeViewItem i in item.Items)
@@ -504,15 +507,9 @@ namespace RemnantSaveManager
         {
             MenuItem mnu = sender as MenuItem;
             TreeViewItem treeItem = ((ContextMenu)mnu?.Parent)?.PlacementTarget as TreeViewItem;
-            var type = ((TreeViewItem)treeItem?.Parent)?.Header.ToString();
-            var itemname = treeItem?.Header.ToString();
-
-            if (type == "Armor")
-            {
-                itemname = itemname.Substring(0, itemname.IndexOf("(")) + "Set";
-            }
-
-            System.Diagnostics.Process.Start($"https://remnantfromtheashes.wiki.fextralife.com/{itemname}");
+            var item = treeItem?.Tag as RemnantItem;
+            if (item == null) return;
+            Process.Start("https://remnantfromtheashes.wiki.fextralife.com/" + Uri.EscapeDataString(item.WikiName));
         }
     }
 }

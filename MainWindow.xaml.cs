@@ -68,14 +68,14 @@ namespace RemnantSaveManager
             {
                 if (value)
                 {
-                    lblStatus.ToolTip = "Backed Up";
+                    lblStatus.ToolTip = "Резервная копия создана";
                     lblStatus.Content = FindResource("StatusOK");
                     btnBackup.IsEnabled = false;
                     btnBackup.Content = FindResource("SaveGrey");
                 }
                 else
                 {
-                    lblStatus.ToolTip = "Not Backed Up";
+                    lblStatus.ToolTip = "Резервная копия не создана";
                     lblStatus.Content = FindResource("StatusNo");
                     btnBackup.IsEnabled = true;
                     btnBackup.Content = FindResource("Save");
@@ -87,12 +87,12 @@ namespace RemnantSaveManager
         {
             InitializeComponent();
             suppressLog = false;
-            txtLog.Text = "Version " + typeof(MainWindow).Assembly.GetName().Version;
+            txtLog.Text = "Версия " + typeof(MainWindow).Assembly.GetName().Version;
             if (Properties.Settings.Default.CreateLogFile)
             {
-                System.IO.File.WriteAllText("log.txt", DateTime.Now.ToString() + ": Version " + typeof(MainWindow).Assembly.GetName().Version + "\r\n");
+                System.IO.File.WriteAllText("log.txt", DateTime.Now.ToString() + ": Версия " + typeof(MainWindow).Assembly.GetName().Version + "\r\n");
             }
-            logMessage("Loading...");
+            logMessage("Загрузка...");
             if (Properties.Settings.Default.UpgradeRequired)
             {
                 Properties.Settings.Default.Upgrade();
@@ -102,7 +102,7 @@ namespace RemnantSaveManager
 
             if (Properties.Settings.Default.SaveFolder.Length == 0)
             {
-                logMessage("Save folder not set; reverting to default.");
+                logMessage("Папка сохранений не задана; используется папка по умолчанию.");
                 Properties.Settings.Default.SaveFolder = defaultSaveFolder;
                 if (!Directory.Exists(defaultSaveFolder))
                 {
@@ -123,26 +123,26 @@ namespace RemnantSaveManager
             }
             else if (!Directory.Exists(Properties.Settings.Default.SaveFolder) && !Properties.Settings.Default.SaveFolder.Equals(defaultSaveFolder))
             {
-                logMessage("Save folder (" + Properties.Settings.Default.SaveFolder + ") not found; reverting to default.");
+                logMessage("Папка сохранений (" + Properties.Settings.Default.SaveFolder + ") не найдена; используется папка по умолчанию.");
                 Properties.Settings.Default.SaveFolder = defaultSaveFolder;
                 Properties.Settings.Default.Save();
             }
             if (Properties.Settings.Default.BackupFolder.Length == 0)
             {
-                logMessage("Backup folder not set; reverting to default.");
+                logMessage("Папка резервных копий не задана; используется папка по умолчанию.");
                 Properties.Settings.Default.BackupFolder = defaultBackupFolder;
                 Properties.Settings.Default.Save();
             }
             else if (!Directory.Exists(Properties.Settings.Default.BackupFolder) && !Properties.Settings.Default.BackupFolder.Equals(defaultBackupFolder))
             {
-                logMessage("Backup folder ("+ Properties.Settings.Default.BackupFolder + ") not found; reverting to default.");
+                logMessage("Папка резервных копий ("+ Properties.Settings.Default.BackupFolder + ") не найдена; используется папка по умолчанию.");
                 Properties.Settings.Default.BackupFolder = defaultBackupFolder;
                 Properties.Settings.Default.Save();
             }
             saveDirPath = Properties.Settings.Default.SaveFolder;
             if (!Directory.Exists(saveDirPath))
             {
-                logMessage("Save folder not found, creating...");
+                logMessage("Папка сохранений не найдена; создаётся новая...");
                 Directory.CreateDirectory(saveDirPath);
             }
             txtSaveFolder.Text = saveDirPath;
@@ -151,7 +151,7 @@ namespace RemnantSaveManager
             this.txtGameFolder.Text = gameDirPath;
             if (!Directory.Exists(gameDirPath))
             {
-                logMessage("Game folder not found...");
+                logMessage("Папка игры не найдена...");
                 this.btnStartGame.IsEnabled = false;
                 this.btnStartGame.Content = this.FindResource("PlayGrey");
                 this.backupCMStart.IsEnabled = false;
@@ -200,7 +200,7 @@ namespace RemnantSaveManager
             activeSaveAnalyzer = new SaveAnalyzer(this)
             {
                 ActiveSave = true,
-                Title = "Active Save World Analyzer"
+                Title = "Анализ мира текущего сохранения"
             };
             backupSaveAnalyzers = new ObservableCollection<SaveAnalyzer>();
 
@@ -212,7 +212,7 @@ namespace RemnantSaveManager
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
             txtLog.IsReadOnly = true;
-            logMessage("Current save date: " + File.GetLastWriteTime(activeSave.SaveProfilePath).ToString());
+            logMessage("Дата текущего сохранения: " + File.GetLastWriteTime(activeSave.SaveProfilePath).ToString());
             //logMessage("Backups folder: " + backupDirPath);
             //logMessage("Save folder: " + saveDirPath);
             loadBackups();
@@ -223,8 +223,8 @@ namespace RemnantSaveManager
             chkShowPossibleItems.IsChecked = Properties.Settings.Default.ShowPossibleItems;
             chkAutoCheckUpdate.IsChecked = Properties.Settings.Default.AutoCheckUpdate;
 
-            cmbMissingItemColor.Items.Add("Red");
-            cmbMissingItemColor.Items.Add("White");
+            cmbMissingItemColor.Items.Add("Красный");
+            cmbMissingItemColor.Items.Add("Белый");
             if (Properties.Settings.Default.MissingItemColor.ToString().Equals("Red"))
             {
                 cmbMissingItemColor.SelectedIndex = 0;
@@ -247,7 +247,7 @@ namespace RemnantSaveManager
         {
             if (!Directory.Exists(backupDirPath))
             {
-                logMessage("Backups folder not found, creating...");
+                logMessage("Папка резервных копий не найдена; создаётся новая...");
                 Directory.CreateDirectory(backupDirPath);
             }
             dataBackups.ItemsSource = null;
@@ -283,10 +283,10 @@ namespace RemnantSaveManager
                 }
             }
             dataBackups.ItemsSource = listBackups;
-            logMessage("Backups found: " + listBackups.Count);
+            logMessage("Найдено резервных копий: " + listBackups.Count);
             if (listBackups.Count > 0)
             {
-                logMessage("Last backup save date: " + listBackups[listBackups.Count - 1].SaveDate.ToString());
+                logMessage("Дата последней резервной копии: " + listBackups[listBackups.Count - 1].SaveDate.ToString());
             }
             if (activeBackup != null)
             {
@@ -370,7 +370,7 @@ namespace RemnantSaveManager
             {
                 if (!activeSave.Valid)
                 {
-                    logMessage("Active save is not valid; backup skipped.");
+                    logMessage("Текущее сохранение некорректно; резервная копия не создана.");
                     return;
                 }
                 int existingSaveIndex = -1;
@@ -423,13 +423,13 @@ namespace RemnantSaveManager
                 checkBackupLimit();
                 dataBackups.Items.Refresh();
                 this.ActiveSaveIsBackedUp = true;
-                logMessage($"Backup completed ({saveDate.ToString()})!", LogType.Success);
+                logMessage($"Резервная копия создана ({saveDate.ToString()})!", LogType.Success);
             }
             catch (IOException ex)
             {
-                if (ex.Message.Contains("being used by another process"))
+                if (((ex.HResult & 0xFFFF) == 32 || (ex.HResult & 0xFFFF) == 33))
                 {
-                    logMessage("Save file in use; waiting 0.5 seconds and retrying.");
+                    logMessage("Файл сохранения занят; повторная попытка через 0,5 секунды.");
                     System.Threading.Thread.Sleep(500);
                     doBackup();
                 }
@@ -449,13 +449,13 @@ namespace RemnantSaveManager
         {
             if (this.isRemnantRunning())
             {
-                this.logMessage("Exit the game before restoring a save backup.", LogType.Error);
+                this.logMessage("Закройте игру перед восстановлением сохранения.", LogType.Error);
                 return;
             }
 
             if (this.dataBackups.SelectedItem == null)
             {
-                this.logMessage("Choose a backup to restore from the list!", LogType.Error);
+                this.logMessage("Выберите резервную копию из списка!", LogType.Error);
                 return;
             }
             SaveBackup selectedBackup = (SaveBackup)dataBackups.SelectedItem;
@@ -516,7 +516,7 @@ namespace RemnantSaveManager
                     }
                     break;
                 default:
-                    this.logMessage("Something went wrong!", LogType.Error);
+                    this.logMessage("Не удалось выполнить операцию!", LogType.Error);
                     return;
             }
 
@@ -531,7 +531,7 @@ namespace RemnantSaveManager
 
             this.updateCurrentWorldAnalyzer();
             this.dataBackups.Items.Refresh();
-            this.logMessage("Backup restored!", LogType.Success);
+            this.logMessage("Сохранение восстановлено!", LogType.Success);
             this.saveWatcher.EnableRaisingEvents = Properties.Settings.Default.AutoBackup;
 
 
@@ -541,13 +541,13 @@ namespace RemnantSaveManager
         {
             if (this.isRemnantRunning())
             {
-                this.logMessage("Exit the game before restoring a save backup.", LogType.Error);
+                this.logMessage("Закройте игру перед восстановлением сохранения.", LogType.Error);
                 return;
             }
 
             if (this.dataBackups.SelectedItem == null)
             {
-                this.logMessage("Choose a backup to restore from the list!", LogType.Error);
+                this.logMessage("Выберите резервную копию из списка!", LogType.Error);
                 return;
             }
             SaveBackup selectedBackup = (SaveBackup)dataBackups.SelectedItem;
@@ -600,7 +600,7 @@ namespace RemnantSaveManager
                 }
                 catch (Exception ex)
                 {
-                    logMessage(ex.GetType()+" setting save file timer: " +ex.Message+"("+ex.StackTrace+")");
+                    logMessage(ex.GetType()+" при запуске таймера сохранения: " +ex.Message+"("+ex.StackTrace+")");
                 }
             });
         }
@@ -640,7 +640,7 @@ namespace RemnantSaveManager
                             }
                             dataBackups.Items.Refresh();
                             TimeSpan span = (newBackupTime - DateTime.Now);
-                            logMessage($"Save change detected, but {span.Minutes + Math.Round(span.Seconds / 60.0, 2)} minutes, left until next backup");
+                            logMessage($"Обнаружено изменение сохранения; до следующей резервной копии осталось {span.Minutes + Math.Round(span.Seconds / 60.0, 2)} мин.");
                         }
                     }
                     if (saveCount != 0)
@@ -668,7 +668,7 @@ namespace RemnantSaveManager
                 }
                 catch (Exception ex)
                 {
-                    logMessage(ex.GetType() + " processing save file change: " + ex.Message + "(" + ex.StackTrace + ")");
+                    logMessage(ex.GetType() + " при обработке изменения сохранения: " + ex.Message + "(" + ex.StackTrace + ")");
                 }
             });
         }
@@ -771,7 +771,7 @@ namespace RemnantSaveManager
                 {
                     if (!listBackups[i].Keep && !listBackups[i].Active)
                     {
-                        logMessage("Deleting excess backup " + listBackups[i].Name + " (" + listBackups[i].SaveDate + ")");
+                        logMessage("Удаление лишней резервной копии " + listBackups[i].Name + " (" + listBackups[i].SaveDate + ")");
                         Directory.Delete(backupDirPath + "\\" + listBackups[i].SaveDate.Ticks, true);
                         removeBackups.Add(listBackups[i]);
                         delNum--;
@@ -789,7 +789,7 @@ namespace RemnantSaveManager
         {
             if (!Directory.Exists(backupDirPath))
             {
-                logMessage("Backups folder not found, creating...");
+                logMessage("Папка резервных копий не найдена; создаётся новая...");
                 Directory.CreateDirectory(backupDirPath);
             }
             Process.Start(backupDirPath+"\\");
@@ -829,12 +829,12 @@ namespace RemnantSaveManager
 
         private void DataBackups_BeginningEdit(object sender, DataGridBeginningEditEventArgs e)
         {
-            if (e.Column.Header.ToString().Equals("SaveDate") || e.Column.Header.ToString().Equals("Active")) e.Cancel = true;
+            if (e.Column.SortMemberPath == "SaveDate" || e.Column.SortMemberPath == "Active") e.Cancel = true;
         }
 
         private void DataBackups_CellEditEnding(object sender, DataGridCellEditEndingEventArgs e)
         {
-            if (e.Column.Header.ToString().Equals("Name") && e.EditAction == DataGridEditAction.Commit)
+            if (e.Column.SortMemberPath == "Name" && e.EditAction == DataGridEditAction.Commit)
             {
                 SaveBackup sb = (SaveBackup)e.Row.Item;
                 if (sb.Name.Equals(""))
@@ -912,9 +912,9 @@ namespace RemnantSaveManager
         private void analyzeMenuItem_Click(object sender, System.EventArgs e)
         {
             SaveBackup saveBackup = (SaveBackup)dataBackups.SelectedItem;
-            logMessage("Showing backup save (" + saveBackup.Name + ") world analyzer...");
+            logMessage("Открытие анализа мира резервной копии (" + saveBackup.Name + ")...");
             SaveAnalyzer analyzer = new SaveAnalyzer(this);
-            analyzer.Title = "Backup Save ("+saveBackup.Name+") World Analyzer";
+            analyzer.Title = "Резервная копия ("+saveBackup.Name+"): анализ мира";
             analyzer.Closing += Backup_Analyzer_Closing;
             List<RemnantCharacter> chars = saveBackup.Save.Characters;
             for (int i = 0; i < chars.Count; i++)
@@ -940,14 +940,14 @@ namespace RemnantSaveManager
         private void deleteMenuItem_Click(object sender, System.EventArgs e)
         {
             SaveBackup save = (SaveBackup)dataBackups.SelectedItem;
-            var confirmResult = MessageBox.Show("Are you sure to delete backup \"" + save.Name + "\" (" + save.SaveDate.ToString() + ")?",
-                                     "Confirm Delete", MessageBoxButton.YesNo, MessageBoxImage.Warning, MessageBoxResult.No);
+            var confirmResult = MessageBox.Show("Удалить резервную копию «" + save.Name + "» (" + save.SaveDate.ToString() + ")?",
+                                     "Подтверждение удаления", MessageBoxButton.YesNo, MessageBoxImage.Warning, MessageBoxResult.No);
             if (confirmResult == MessageBoxResult.Yes)
             {
                 if (save.Keep)
                 {
-                    confirmResult = MessageBox.Show("This backup is marked for keeping. Are you SURE to delete backup \"" + save.Name + "\" (" + save.SaveDate.ToString() + ")?",
-                                     "Confirm Delete", MessageBoxButton.YesNo, MessageBoxImage.Warning, MessageBoxResult.No);
+                    confirmResult = MessageBox.Show("Эта копия отмечена для хранения. Всё равно удалить резервную копию «" + save.Name + "» (" + save.SaveDate.ToString() + ")?",
+                                     "Подтверждение удаления", MessageBoxButton.YesNo, MessageBoxImage.Warning, MessageBoxResult.No);
                     if (confirmResult != MessageBoxResult.Yes)
                     {
                         return;
@@ -963,13 +963,13 @@ namespace RemnantSaveManager
                 }
                 listBackups.Remove(save);
                 dataBackups.Items.Refresh();
-                logMessage("Backup \"" + save.Name + "\" (" + save.SaveDate + ") deleted.");
+                logMessage("Резервная копия «" + save.Name + "» (" + save.SaveDate + ") удалена.");
             }
         }
 
         private void BtnAnalyzeCurrent_Click(object sender, RoutedEventArgs e)
         {
-            logMessage("Showing current save world analyzer...");
+            logMessage("Открытие анализа мира текущего сохранения...");
             activeSaveAnalyzer.Show();
         }
 
@@ -1009,7 +1009,7 @@ namespace RemnantSaveManager
                 try
                 {
                     WebClient client = new WebClient();
-                    string source = client.DownloadString("https://github.com/Razzmatazzz/RemnantSaveManager/releases/latest");
+                    string source = client.DownloadString("https://github.com/PavelZagumenkin/RemnantSaveManager_Razzmatazzz_RU/releases/latest");
                     string title = Regex.Match(source, @"\<title\b[^>]*\>\s*(?<Title>[\s\S]*?)\</title\>", RegexOptions.IgnoreCase).Groups["Title"].Value;
                     string remoteVer = Regex.Match(source, @"Remnant Save Manager (?<Version>([\d.]+)?)", RegexOptions.IgnoreCase).Groups["Version"].Value;
 
@@ -1021,11 +1021,11 @@ namespace RemnantSaveManager
                         //do stuff in here with the interface
                         if (localVersion.CompareTo(remoteVersion) == -1)
                         {
-                            var confirmResult = MessageBox.Show("There is a new version available. Would you like to open the download page?",
-                                     "Update Available", MessageBoxButton.YesNo, MessageBoxImage.Question, MessageBoxResult.No);
+                            var confirmResult = MessageBox.Show("Доступна новая версия русской сборки. Открыть страницу загрузки?",
+                                     "Доступно обновление", MessageBoxButton.YesNo, MessageBoxImage.Question, MessageBoxResult.No);
                             if (confirmResult == MessageBoxResult.Yes)
                             {
-                                Process.Start("https://github.com/Razzmatazzz/RemnantSaveManager/releases/latest");
+                                Process.Start("https://github.com/PavelZagumenkin/RemnantSaveManager_Razzmatazzz_RU/releases/latest");
                                 System.Environment.Exit(1);
                             }
                         } else
@@ -1038,7 +1038,7 @@ namespace RemnantSaveManager
                 {
                     this.Dispatcher.Invoke(() =>
                     {
-                        logMessage("Error checking for new version: " + ex.Message, LogType.Error);
+                        logMessage("Ошибка проверки обновления программы: " + ex.Message, LogType.Error);
                     });
                 }
             }).Start();
@@ -1064,15 +1064,15 @@ namespace RemnantSaveManager
         {
             System.Windows.Forms.FolderBrowserDialog openFolderDialog = new System.Windows.Forms.FolderBrowserDialog();
             openFolderDialog.SelectedPath = backupDirPath;
-            openFolderDialog.Description = "Select the folder where you want your backup saves kept.";
+            openFolderDialog.Description = "Выберите папку для резервных копий сохранений.";
             System.Windows.Forms.DialogResult result = openFolderDialog.ShowDialog();
             if (result == System.Windows.Forms.DialogResult.OK)
             {
                 string folderName = openFolderDialog.SelectedPath;
                 if (folderName.Equals(saveDirPath))
                 {
-                    MessageBox.Show("Please select a folder other than the game's save folder.",
-                                     "Invalid Folder", MessageBoxButton.OK, MessageBoxImage.Warning, MessageBoxResult.OK);
+                    MessageBox.Show("Выберите папку, отличную от папки сохранений игры.",
+                                     "Неверная папка", MessageBoxButton.OK, MessageBoxImage.Warning, MessageBoxResult.OK);
                     return;
                 }
                 if (folderName.Equals(backupDirPath))
@@ -1081,8 +1081,8 @@ namespace RemnantSaveManager
                 }
                 if (listBackups.Count > 0)
                 {
-                    var confirmResult = MessageBox.Show("Do you want to move your backups to this new folder?",
-                                     "Move Backups", MessageBoxButton.YesNo, MessageBoxImage.Question, MessageBoxResult.No);
+                    var confirmResult = MessageBox.Show("Переместить резервные копии в новую папку?",
+                                     "Перемещение резервных копий", MessageBoxButton.YesNo, MessageBoxImage.Question, MessageBoxResult.No);
                     if (confirmResult == MessageBoxResult.Yes)
                     {
                         List<String> backupFiles = Directory.GetDirectories(backupDirPath).ToList();
@@ -1111,9 +1111,10 @@ namespace RemnantSaveManager
 
         private void DataBackups_AutoGeneratingColumn(object sender, DataGridAutoGeneratingColumnEventArgs e)
         {
-            if (e.Column.Header.Equals("Save")) {
+            if (e.PropertyName == "Save") {
                 e.Cancel = true;
             }
+            else e.Column.Header = Localization.Text(e.PropertyName);
         }
 
         private void btnGameInfoUpdate_Click(object sender, RoutedEventArgs e)
@@ -1125,7 +1126,7 @@ namespace RemnantSaveManager
             else
             {
                 TimeSpan span = (lastUpdateCheck.AddMinutes(10) - DateTime.Now);
-                logMessage("Please wait " + span.Minutes+" minutes, "+span.Seconds+" seconds before checking for update.");
+                logMessage("До следующей проверки обновлений подождите " + span.Minutes+" мин. "+span.Seconds+" сек.");
             }
         }
 
@@ -1141,7 +1142,7 @@ namespace RemnantSaveManager
             bool newValue = chkCreateLogFile.IsChecked.HasValue ? chkCreateLogFile.IsChecked.Value : false;
             if (newValue & !Properties.Settings.Default.CreateLogFile)
             {
-                System.IO.File.WriteAllText("log.txt", DateTime.Now.ToString() + ": Version " + typeof(MainWindow).Assembly.GetName().Version + "\r\n");
+                System.IO.File.WriteAllText("log.txt", DateTime.Now.ToString() + ": Версия " + typeof(MainWindow).Assembly.GetName().Version + "\r\n");
             }
             Properties.Settings.Default.CreateLogFile = newValue;
             Properties.Settings.Default.Save();
@@ -1149,7 +1150,7 @@ namespace RemnantSaveManager
 
         private void cmbMissingItemColorSelectionChanged(object sender, RoutedEventArgs e)
         {
-            Properties.Settings.Default.MissingItemColor = cmbMissingItemColor.SelectedItem.ToString();
+            Properties.Settings.Default.MissingItemColor = cmbMissingItemColor.SelectedIndex == 0 ? "Red" : "White";
             Properties.Settings.Default.Save();
             updateCurrentWorldAnalyzer();
         }
@@ -1173,15 +1174,15 @@ namespace RemnantSaveManager
         {
             System.Windows.Forms.FolderBrowserDialog openFolderDialog = new System.Windows.Forms.FolderBrowserDialog();
             openFolderDialog.SelectedPath = saveDirPath;
-            openFolderDialog.Description = "Select where your Remnant saves are stored.";
+            openFolderDialog.Description = "Выберите папку сохранений Remnant.";
             System.Windows.Forms.DialogResult result = openFolderDialog.ShowDialog();
             if (result == System.Windows.Forms.DialogResult.OK)
             {
                 string folderName = openFolderDialog.SelectedPath;
                 if (folderName.Equals(backupDirPath))
                 {
-                    MessageBox.Show("Please select a folder other than the backup folder.",
-                                     "Invalid Folder", MessageBoxButton.OK, MessageBoxImage.Warning, MessageBoxResult.OK);
+                    MessageBox.Show("Выберите папку, отличную от папки резервных копий.",
+                                     "Неверная папка", MessageBoxButton.OK, MessageBoxImage.Warning, MessageBoxResult.OK);
                     return;
                 }
                 if (folderName.Equals(saveDirPath))
@@ -1190,8 +1191,8 @@ namespace RemnantSaveManager
                 }
                 if (!RemnantSave.ValidSaveFolder(folderName))
                 {
-                    MessageBox.Show("Please select the folder containing your Remnant save.",
-                                     "Invalid Folder", MessageBoxButton.OK, MessageBoxImage.Warning, MessageBoxResult.OK);
+                    MessageBox.Show("Выберите папку с сохранениями Remnant.",
+                                     "Неверная папка", MessageBoxButton.OK, MessageBoxImage.Warning, MessageBoxResult.OK);
                     return;
                 }
                 txtSaveFolder.Text = folderName;
@@ -1335,15 +1336,15 @@ namespace RemnantSaveManager
         {
             System.Windows.Forms.FolderBrowserDialog openFolderDialog = new System.Windows.Forms.FolderBrowserDialog();
             openFolderDialog.SelectedPath = gameDirPath;
-            openFolderDialog.Description = "Select where your Remnant game is installed.";
+            openFolderDialog.Description = "Выберите папку установленной игры Remnant.";
             System.Windows.Forms.DialogResult result = openFolderDialog.ShowDialog();
             if (result == System.Windows.Forms.DialogResult.OK)
             {
                 string folderName = openFolderDialog.SelectedPath;
                 if (!File.Exists(folderName + "\\Remnant.exe"))
                 {
-                    MessageBox.Show("Please select the folder containing your Remnant game.",
-                                     "Invalid Folder", MessageBoxButton.OK, MessageBoxImage.Warning, MessageBoxResult.OK);
+                    MessageBox.Show("Выберите папку, в которой установлена игра Remnant.",
+                                     "Неверная папка", MessageBoxButton.OK, MessageBoxImage.Warning, MessageBoxResult.OK);
                     return;
                 }
                 if (folderName.Equals(gameDirPath))

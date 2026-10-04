@@ -14,9 +14,12 @@ namespace RemnantSaveManager
     {
         private string eventKey;
         private List<RemnantItem> mItems;
-        public string Location { get; set; }
-        public string Type { get; set; }
-        public string Name { get; set; }
+        private string location;
+        private string type;
+        private string name;
+        public string Location { get { return Localization.Location(location); } set { location = value; } }
+        public string Type { get { return Localization.Text(type); } set { type = value; } }
+        public string Name { get { return Localization.EventName(eventKey, name); } set { name = value; } }
         public string MissingItems {
             get {
                 return string.Join("\n", mItems);
@@ -179,7 +182,7 @@ namespace RemnantSaveManager
                             {
                                 se.Name = eventName;
                             }
-                            se.Name = Regex.Replace(se.Name, "([a-z])([A-Z])", "$1 $2");
+                            se.Name = Regex.Replace(se.name, "([a-z])([A-Z])", "$1 $2");
                         }
 
                         if (zone != null && eventType != null && eventName != null)
@@ -250,9 +253,9 @@ namespace RemnantSaveManager
                 }
                 catch (Exception ex)
                 {
-                    Console.WriteLine("Error parsing save event:");
-                    Console.WriteLine("\tLine: " + textLine);
-                    Console.WriteLine("\tError: " + ex.ToString());
+                    Console.WriteLine("Ошибка разбора события сохранения:");
+                    Console.WriteLine("\tСтрока: " + textLine);
+                    Console.WriteLine("\tОшибка: " + ex.ToString());
                 }
             }
 
@@ -311,7 +314,7 @@ namespace RemnantSaveManager
             for (int i = 0; i < zoneEvents["Earth"].Count; i++)
             {
                 //if (mode == ProcessMode.Subject2923) Console.WriteLine(zoneEvents["Earth"][i].eventKey);
-                if (mode == ProcessMode.Campaign && !churchAdded && zoneEvents["Earth"][i].Location.Contains("Westcourt"))
+                if (mode == ProcessMode.Campaign && !churchAdded && zoneEvents["Earth"][i].location.Contains("Westcourt"))
                 {
                     foreach (RemnantWorldEvent rwe in churchEvents)
                     {
@@ -328,7 +331,7 @@ namespace RemnantSaveManager
             if (mode == ProcessMode.Campaign && undying.MissingItems.Length > 0) orderedEvents.Add(undying);
             for (int i = 0; i < zoneEvents["Corsus"].Count; i++)
             {
-                if (mode == ProcessMode.Campaign && !queenAdded && zoneEvents["Corsus"][i].Location.Contains("The Mist Fen"))
+                if (mode == ProcessMode.Campaign && !queenAdded && zoneEvents["Corsus"][i].location.Contains("The Mist Fen"))
                 {
                     if (queen.MissingItems.Length > 0) orderedEvents.Add(queen);
                     queenAdded = true;
@@ -337,7 +340,7 @@ namespace RemnantSaveManager
             }
             for (int i = 0; i < zoneEvents["Yaesha"].Count; i++)
             {
-                if (mode == ProcessMode.Campaign && !navunAdded && zoneEvents["Yaesha"][i].Location.Contains("The Scalding Glade"))
+                if (mode == ProcessMode.Campaign && !navunAdded && zoneEvents["Yaesha"][i].location.Contains("The Scalding Glade"))
                 {
                     if (navun.MissingItems.Length > 0) orderedEvents.Add(navun);
                     navunAdded = true;
@@ -346,7 +349,7 @@ namespace RemnantSaveManager
             }
             for (int i = 0; i < zoneEvents["Reisum"].Count; i++)
             {
-                /*if (mode == ProcessMode.Campaign && !navunAdded && zoneEvents["Yaesha"][i].Location.Contains("The Scalding Glade"))
+                /*if (mode == ProcessMode.Campaign && !navunAdded && zoneEvents["Yaesha"][i].location.Contains("The Scalding Glade"))
                 {
                     if (navun.MissingItems.Length > 0) orderedEvents.Add(navun);
                     navunAdded = true;

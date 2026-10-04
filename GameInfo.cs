@@ -12,6 +12,8 @@ namespace RemnantSaveManager
     class GameInfo
     {
         public static event EventHandler<GameInfoUpdateEventArgs> GameInfoUpdate;
+        private static readonly string gameInfoPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "GameInfo.xml");
+        private static readonly string tempGameInfoPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "TempGameInfo.xml");
         private static Dictionary<string, string> zones = new Dictionary<string, string>();
         private static Dictionary<string, string> events = new Dictionary<string, string>();
         private static Dictionary<string, RemnantItem[]> eventItem = new Dictionary<string, RemnantItem[]>();
@@ -105,7 +107,11 @@ namespace RemnantSaveManager
             string itemNotes = null;
             string itemAltName = null;
             List<RemnantItem> eventItems = new List<RemnantItem>();
-            XmlTextReader reader = new XmlTextReader("GameInfo.xml");
+            Stream catalog = File.Exists(gameInfoPath) ? File.OpenRead(gameInfoPath) :
+                typeof(GameInfo).Assembly.GetManifestResourceStream("RemnantSaveManager.GameInfo.xml");
+            if (catalog == null) throw new InvalidOperationException("Игровой справочник не найден.");
+            XmlTextReader reader = new XmlTextReader(catalog);
+            reader.DtdProcessing = DtdProcessing.Prohibit;
             reader.WhitespaceHandling = WhitespaceHandling.None;
             while (reader.Read())
             {
@@ -169,6 +175,7 @@ namespace RemnantSaveManager
                             eventItems.Add(rItem);
                             itemMode = null;
                             itemNotes = null;
+                            itemAltName = null;
                         }
                         break;
                     case XmlNodeType.EndElement:
@@ -190,9 +197,9 @@ namespace RemnantSaveManager
             try
             {
                 WebClient client = new WebClient();
-                client.DownloadFile("https://raw.githubusercontent.com/Razzmatazzz/RemnantSaveManager/master/Resources/GameInfo.xml", "TempGameInfo.xml");
+                client.DownloadFile("https://raw.githubusercontent.com/Razzmatazzz/RemnantSaveManager/master/Resources/GameInfo.xml", tempGameInfoPath);
 
-                XmlTextReader reader = new XmlTextReader("TempGameInfo.xml");
+                XmlTextReader reader = new XmlTextReader(tempGameInfoPath);
                 reader.WhitespaceHandling = WhitespaceHandling.None;
                 int remoteversion = 0;
                 int localversion = 0;
@@ -209,9 +216,9 @@ namespace RemnantSaveManager
                 }
                 args.RemoteVersion = remoteversion;
                 reader.Close();
-                if (File.Exists("GameInfo.xml"))
+                if (File.Exists(gameInfoPath))
                 {
-                    reader = new XmlTextReader("GameInfo.xml");
+                    reader = new XmlTextReader(gameInfoPath);
                     while (reader.Read())
                     {
                         if (reader.NodeType == XmlNodeType.Element)
@@ -228,27 +235,27 @@ namespace RemnantSaveManager
 
                     if (remoteversion > localversion)
                     {
-                        File.Delete("GameInfo.xml");
-                        File.Move("TempGameInfo.xml", "GameInfo.xml");
+                        File.Delete(gameInfoPath);
+                        File.Move(tempGameInfoPath, gameInfoPath);
                         RefreshGameInfo();
                         args.Result = GameInfoUpdateResult.Updated;
-                        args.Message = "Game info updated from v"+localversion+" to v"+remoteversion+".";
+                        args.Message = "Игровой справочник обновлён с версии "+localversion+" до версии "+remoteversion+".";
                     }
                     else
                     {
-                        File.Delete("TempGameInfo.xml");
+                        File.Delete(tempGameInfoPath);
                     }
                 } else
                 {
-                    File.Move("TempGameInfo.xml", "GameInfo.xml");
+                    File.Move(tempGameInfoPath, gameInfoPath);
                     RefreshGameInfo();
                     args.Result = GameInfoUpdateResult.Updated;
-                    args.Message = "No local game info found; updated to v"+remoteversion+".";
+                    args.Message = "Локальный справочник не найден; загружена версия "+remoteversion+".";
                 }
             } catch (Exception ex)
             {
                 args.Result = GameInfoUpdateResult.Failed;
-                args.Message = "Error checking for new game info: " + ex.Message;
+                args.Message = "Ошибка проверки обновления игрового справочника: " + ex.Message;
             }
 
             OnGameInfoUpdate(args);
@@ -271,7 +278,7 @@ namespace RemnantSaveManager
         {
             this.LocalVersion = 0;
             this.RemoteVersion = 0;
-            this.Message = "No new game info found.";
+            this.Message = "Обновлений игрового справочника нет.";
             this.Result = GameInfoUpdateResult.NoUpdate;
         }
     }

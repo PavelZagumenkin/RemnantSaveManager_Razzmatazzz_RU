@@ -19,7 +19,7 @@ namespace RemnantSaveManager
         {
             if (!Directory.Exists(path))
             {
-                throw new Exception(path + " does not exist.");
+                throw new Exception(path + " не существует.");
             }
 
             if (File.Exists(path + "\\profile.sav"))
@@ -38,7 +38,7 @@ namespace RemnantSaveManager
                 }
                 else
                 {
-                    throw new Exception(path + " is not a valid save.");
+                    throw new Exception(path + " не содержит корректного сохранения.");
                 }
             }
             this.savePath = path;

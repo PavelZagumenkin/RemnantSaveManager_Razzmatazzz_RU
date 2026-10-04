@@ -14,7 +14,7 @@ namespace RemnantSaveManager
         public RestoreDialog(MainWindow @mw, SaveBackup @sb, RemnantSave @as)
         {
             InitializeComponent();
-            this.txtSave.Content = $"Save Name:\t{sb.Name}\nSave Date:\t{sb.SaveDate.ToString(CultureInfo.CurrentCulture)}";
+            this.txtSave.Content = $"Название:\t{sb.Name}\nДата:\t\t{sb.SaveDate.ToString(CultureInfo.CurrentCulture)}";
             this._saveBackup = sb;
             this._activeSave = @as;
         }
@@ -31,8 +31,8 @@ namespace RemnantSaveManager
 
             if (this._saveBackup.Save.Characters.Count != this._activeSave.Characters.Count)
             {
-                MessageBoxResult confirmResult = MessageBox.Show("The active save has a different number of characters than the backup worlds you are restoring. This may result in unexpected behavior. Proceed?",
-                                     "Character Mismatch", MessageBoxButton.YesNo, MessageBoxImage.Warning, MessageBoxResult.No);
+                MessageBoxResult confirmResult = MessageBox.Show("Число персонажей в текущем сохранении отличается от числа миров в резервной копии. Возможны непредвиденные последствия. Продолжить?",
+                                     "Число персонажей не совпадает", MessageBoxButton.YesNo, MessageBoxImage.Warning, MessageBoxResult.No);
                 if (confirmResult == MessageBoxResult.No)
                 {
                     DialogResult = false;

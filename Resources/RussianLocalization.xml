@@ -1,0 +1,597 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<Localization culture="ru-RU">
+  <Events>
+    <Entry key="AbandonedThrone" value="Заброшенный трон" />
+    <Entry key="AbrasiveAmulet" value="Абразивный амулет" />
+    <Entry key="AcesCoin" value="Монета Эйс" />
+    <Entry key="Afterbirth" value="Хижина холодного ветра" />
+    <Entry key="AggressorsBane" value="Погибель агрессора" />
+    <Entry key="AlchemistsJewel" value="Камень алхимика" />
+    <Entry key="ArmorVault" value="Хранилище брони" />
+    <Entry key="BackbreakerRing" value="Кольцо костолома" />
+    <Entry key="BandOfCastor" value="Кольцо Кастора" />
+    <Entry key="BandOfPollux" value="Кольцо Поллукса" />
+    <Entry key="BandOfStrength" value="Кольцо силы" />
+    <Entry key="BarbTerror" value="Колючий ужас" />
+    <Entry key="BarnSiege" value="Осада амбара" />
+    <Entry key="BlinkFiend" value="Натиск" />
+    <Entry key="BlinkThief" value="Телепортирующийся вор" />
+    <Entry key="BlizzardMage" value="Икро, заклинатель льда" />
+    <Entry key="BloodFont" value="Источник крови" />
+    <Entry key="Brabus" value="Брабус" />
+    <Entry key="BrainBug" value="Мар'гош" />
+    <Entry key="BrutalMark" value="Жестокая метка" />
+    <Entry key="BurdenOfTheDevoted" value="Бремя преданного" />
+    <Entry key="BurdenOfTheFollower" value="Бремя последователя" />
+    <Entry key="BurdenOfTheGambler" value="Бремя игрока" />
+    <Entry key="BurdenOfTheReckless" value="Бремя безрассудного" />
+    <Entry key="BurdenOfTheWarlord" value="Бремя военачальника" />
+    <Entry key="ButchersFetish" value="Фетиш мясника" />
+    <Entry key="CharcoalNecklace" value="Угольное ожерелье" />
+    <Entry key="CleansingJewel" value="Очищающий камень" />
+    <Entry key="CompulsionLoop" value="Кольцо принуждения" />
+    <Entry key="CreepersPeeper" value="Глаз ползуна" />
+    <Entry key="Cryptolith" value="Криптолит" />
+    <Entry key="DeceiversBand" value="Кольцо обманщика" />
+    <Entry key="DevouringLoop" value="Пожирающее кольцо" />
+    <Entry key="DoeShrine" value="Святилище лани" />
+    <Entry key="DrifterMask" value="Маска скитальца" />
+    <Entry key="Driftstone" value="Парящий камень" />
+    <Entry key="EzlansBand" value="Кольцо Эзлана" />
+    <Entry key="Fatty" value="Нечистый" />
+    <Entry key="FetidPool" value="Зловонный пруд" />
+    <Entry key="FiveFingeredRing" value="Пятипалое кольцо" />
+    <Entry key="Flautist" value="Флейтист" />
+    <Entry key="FlickeringHorror" value="Пожиратель снов" />
+    <Entry key="FoundersHideout" value="Убежище основателя" />
+    <Entry key="FrozenLords" value="Замёрзшие лорды" />
+    <Entry key="GalenicCharm" value="Галеновый талисман" />
+    <Entry key="GraveyardElf" value="Кладбищенская эльфийка" />
+    <Entry key="GravityStone" value="Камень гравитации" />
+    <Entry key="Guardian" value="Страж" />
+    <Entry key="GunslignersRing" value="Кольцо стрелка" />
+    <Entry key="GunslingersCharm" value="Талисман стрелка" />
+    <Entry key="HeartSeeker" value="Искатель сердец" />
+    <Entry key="Homestead" value="Усадьба" />
+    <Entry key="HoundMaster" value="Псарник" />
+    <Entry key="HuntersBand" value="Кольцо охотника" />
+    <Entry key="HuntersHalo" value="Ореол охотника" />
+    <Entry key="HuntersHideout" value="Убежище охотника" />
+    <Entry key="IceSkimmer" value="Ледовый корабль" />
+    <Entry key="ImmolatorAndZephyr" value="Обжигатель и Испепелитель" />
+    <Entry key="IskalQueen" value="Королева Искал" />
+    <Entry key="JanitorsWatch" value="Часы смотрителя" />
+    <Entry key="KeepersRing" value="Кольцо хранителя" />
+    <Entry key="KinCaller" value="Страж" />
+    <Entry key="KrallBaby" value="Детёныш кралла" />
+    <Entry key="LastWill" value="Поход за припасами" />
+    <Entry key="LeechEmber" value="Уголь пиявки" />
+    <Entry key="LizAndLiz" value="История двух Лиз" />
+    <Entry key="MadMerchant" value="Безумный торговец" />
+    <Entry key="Monolith" value="Монолит" />
+    <Entry key="MothersRing" value="Кольцо матери" />
+    <Entry key="MudTooth" value="Грязный Зуб" />
+    <Entry key="Nexus" value="Узел Корня" />
+    <Entry key="OldManAndConstruct" value="Вуд и древний конструкт" />
+    <Entry key="PearlOfLuminescence" value="Светящаяся жемчужина" />
+    <Entry key="Penitent" value="Амулет Лето" />
+    <Entry key="PillarOfStone" value="Каменный столп" />
+    <Entry key="PolishedWhetstone" value="Полированный точильный камень" />
+    <Entry key="QueensTemple" value="Храм королевы" />
+    <Entry key="RadioactiveEmber" value="Радиоактивный уголь" />
+    <Entry key="RatRider" value="Варгр и Брудваак" />
+    <Entry key="RazorStone" value="Острый камень" />
+    <Entry key="RazorwireNecklace" value="Ожерелье из колючей проволоки" />
+    <Entry key="ReggiesRing" value="Кольцо Реджи" />
+    <Entry key="RestrictionCord" value="Ограничивающий шнур" />
+    <Entry key="RingOfElusion" value="Кольцо ускользания" />
+    <Entry key="RingOfEvasion" value="Кольцо уклонения" />
+    <Entry key="RingOfShadows" value="Кольцо теней" />
+    <Entry key="RockOfAnguish" value="Камень страдания" />
+    <Entry key="RootBrute" value="Кровавый Кулак" />
+    <Entry key="RootCultist" value="Культист Корня" />
+    <Entry key="RootDragon" value="Опалитель" />
+    <Entry key="RootEnt" value="Энт" />
+    <Entry key="RootMother" value="Мать Корня" />
+    <Entry key="RootShrine" value="Святилище Корня" />
+    <Entry key="RootTumbleweed" value="Потрошитель" />
+    <Entry key="RootWraith" value="Пелена" />
+    <Entry key="Ruins" value="Руины" />
+    <Entry key="SageStone" value="Камень мудреца" />
+    <Entry key="Sentinel" value="Разоритель" />
+    <Entry key="SerpentsFang" value="Клык змеи" />
+    <Entry key="Settlement" value="Поселение" />
+    <Entry key="ShamanFlames" value="Пламя шамана" />
+    <Entry key="ShieldWarden" value="Обрик, хранитель щита" />
+    <Entry key="Simulacrum" value="Симулякр" />
+    <Entry key="Sketterling" value="Жук с добычей" />
+    <Entry key="SlaveRevolt" value="Бой с повстанцами" />
+    <Entry key="SlimeHulk" value="Язва" />
+    <Entry key="SnowRuins" value="Безмолвный снег" />
+    <Entry key="SoulLink" value="Связь душ" />
+    <Entry key="SpiritStone" value="Камень духа" />
+    <Entry key="Splitter" value="Разрыватель" />
+    <Entry key="StalkersBrand" value="Метка преследователя" />
+    <Entry key="StockpileCirclet" value="Кольцо запасов" />
+    <Entry key="StoneOfBalance" value="Камень равновесия" />
+    <Entry key="StormAmulet" value="Амулет бури" />
+    <Entry key="StormCaller" value="Призыв бури" />
+    <Entry key="StuckMerchant" value="Застрявшая торговка" />
+    <Entry key="SwampGuardian" value="Иксиллис" />
+    <Entry key="SwarmMaster" value="Плеть" />
+    <Entry key="TalismanOfAnimosity" value="Талисман вражды" />
+    <Entry key="TalismanOfPerseverance" value="Талисман упорства" />
+    <Entry key="TerrorMargin" value="Грань ужаса" />
+    <Entry key="TheCleanRoom" value="Чистая комната" />
+    <Entry key="TheHarrow" value="Мучитель" />
+    <Entry key="TheJackal" value="Эрфор Шакал" />
+    <Entry key="TheLostGantry" value="Затерянная платформа" />
+    <Entry key="TheRisen" value="Восставшие" />
+    <Entry key="TotemFather" value="Отец тотемов" />
+    <Entry key="TraitBook" value="Книга знаний" />
+    <Entry key="Tyrant" value="Раб" />
+    <Entry key="Uncategorized" value="Без категории" />
+    <Entry key="UndyingKing" value="Бессмертный король" />
+    <Entry key="UrikkiBlademasters" value="Тиан, убийца" />
+    <Entry key="VargylBones" value="Кости варгила" />
+    <Entry key="VengeanceIdol" value="Идол мести" />
+    <Entry key="VolatileGem" value="Нестабильный камень" />
+    <Entry key="Vyr" value="Тень и Раскол" />
+    <Entry key="WailingWood" value="Плачущее дерево" />
+    <Entry key="Ward13" value="Блок 13" />
+    <Entry key="Ward17" value="Сновидец" />
+    <Entry key="Ward17Root" value="Харсгаард" />
+    <Entry key="WardPrime" value="Главный блок" />
+    <Entry key="WarningTotems" value="Предупреждающие тотемы" />
+    <Entry key="WastelandGuardian" value="Клавигер" />
+    <Entry key="Wisp" value="Инкубатор венцов" />
+    <Entry key="Wolf" value="Разоритель" />
+    <Entry key="WolfShrine" value="Святилище Разорителя" />
+  </Events>
+  <Locations>
+    <Entry key="Ahanae'sLament" value="Плач Аханы" />
+    <Entry key="ChapelStation" value="Станция у часовни" />
+    <Entry key="ChurchOfTheHarbinger" value="Церковь Предвестника" />
+    <Entry key="CircletHatchery" value="Инкубатор венцов" />
+    <Entry key="ConcourseOfTheSun" value="Площадь солнца" />
+    <Entry key="Corsus" value="Корсус" />
+    <Entry key="CutthroatChannel" value="Канал головорезов" />
+    <Entry key="DeepfrostExpanse" value="Морозные просторы" />
+    <Entry key="DrolniirWoods" value="Леса Дролнира" />
+    <Entry key="Earth" value="Земля" />
+    <Entry key="Exile'sTrench" value="Траншея изгнанника" />
+    <Entry key="Fairview" value="Фэйрвью" />
+    <Entry key="ForgottenUndercroft" value="Забытый склеп" />
+    <Entry key="GraveOfTheElders" value="Могила старейшин" />
+    <Entry key="HallOfWhispers" value="Зал шёпота" />
+    <Entry key="Heretic'sNest" value="Гнездо еретика" />
+    <Entry key="HiddenGrotto" value="Скрытый грот" />
+    <Entry key="Judgment'sSpear" value="Копьё правосудия" />
+    <Entry key="Junktown" value="Город хлама" />
+    <Entry key="LoomOfTheBlackSun" value="Обитель Чёрного солнца" />
+    <Entry key="Magir'sDirge" value="Погребальная песнь Магира" />
+    <Entry key="MarrowPass" value="Костяной проход" />
+    <Entry key="MerchantDungeon" value="Подземелье торговца" />
+    <Entry key="NeedleLair" value="Логово игл" />
+    <Entry key="Reisum" value="Рейсам" />
+    <Entry key="ResearchStationAlpha" value="Исследовательская станция «Альфа»" />
+    <Entry key="Rhom" value="Ром" />
+    <Entry key="Rural" value="Сельская местность" />
+    <Entry key="ShackledCanyon" value="Каньон оков" />
+    <Entry key="ShrineoftheImmortals" value="Святилище бессмертных" />
+    <Entry key="Sorrow'sField" value="Поле скорби" />
+    <Entry key="StrangePass" value="Странный проход" />
+    <Entry key="SunkenPassage" value="Затопленный проход" />
+    <Entry key="TempleOfTheRavager" value="Храм Разорителя" />
+    <Entry key="TheArdentTemple" value="Пылающий храм" />
+    <Entry key="TheAshYard" value="Пепельный двор" />
+    <Entry key="TheBunker" value="Бункер" />
+    <Entry key="TheBurrows" value="Норы" />
+    <Entry key="TheCapillary" value="Капилляр" />
+    <Entry key="TheChokingHollow" value="Удушливая лощина" />
+    <Entry key="TheCrimsonHold" value="Багровая крепость" />
+    <Entry key="TheDrownedTrench" value="Затопленная траншея" />
+    <Entry key="TheEasternWind" value="Восточный ветер" />
+    <Entry key="TheFetidGlade" value="Зловонная поляна" />
+    <Entry key="TheFrieranSea" value="Море Фриэран" />
+    <Entry key="TheGallows" value="Виселица" />
+    <Entry key="TheGrotto" value="Грот" />
+    <Entry key="TheGuardian'sSanctum" value="Святилище стража" />
+    <Entry key="TheHallOfJudgement" value="Зал суда" />
+    <Entry key="TheHiddenSanctum" value="Тайное святилище" />
+    <Entry key="TheIronRift" value="Железный разлом" />
+    <Entry key="TheMistFen" value="Туманное болото" />
+    <Entry key="ThePurgeHall" value="Зал очищения" />
+    <Entry key="TheRavager'sHaunt" value="Логово Разорителя" />
+    <Entry key="TheScaldingGlade" value="Обжигающая поляна" />
+    <Entry key="TheScouringWaste" value="Выжженная пустошь" />
+    <Entry key="TheTangledPass" value="Запутанный проход" />
+    <Entry key="TheTempestCourt" value="Двор бури" />
+    <Entry key="TheVerdantStrand" value="Зелёный берег" />
+    <Entry key="TheWarren" value="Лабиринт нор" />
+    <Entry key="TheWildReach" value="Дикие просторы" />
+    <Entry key="UndyingThrone" value="Трон Бессмертного" />
+    <Entry key="ValenhaagMines" value="Шахты Валенхааг" />
+    <Entry key="VaultOfTheHeralds" value="Хранилище глашатаев" />
+    <Entry key="Ward13" value="Блок 13" />
+    <Entry key="Ward17" value="Блок 17" />
+    <Entry key="Ward17(RootDimension)" value="Блок 17 (измерение Корня)" />
+    <Entry key="WardPrime" value="Главный блок" />
+    <Entry key="Watcher'sHollow" value="Лощина наблюдателя" />
+    <Entry key="Westcourt" value="Весткорт" />
+    <Entry key="Widow'sPass" value="Проход вдовы" />
+    <Entry key="Widow'sVestry" value="Ризница вдовы" />
+    <Entry key="WitheringVillage" value="Увядающая деревня" />
+    <Entry key="WutheringKeep" value="Крепость ветров" />
+    <Entry key="Yaesha" value="Яэша" />
+  </Locations>
+  <Texts>
+    <Entry key="According to devs, can also be a random drop on Yaesha (unconfirmed)" value="По словам разработчиков, также встречается случайно на Яэше (не подтверждено)" />
+    <Entry key="Active" value="Активная" />
+    <Entry key="Armor" value="Броня" />
+    <Entry key="Cultist" value="Культист" />
+    <Entry key="Cure 25 full status effects using consumables" value="Снимите 25 полностью накопленных эффектов состояния расходными предметами" />
+    <Entry key="Deal 5,000 damage to armored points on enemies" value="Нанесите 5000 урона бронированным участкам врагов" />
+    <Entry key="Destroy all totems after activating them" value="Уничтожьте все тотемы после их активации" />
+    <Entry key="Destroy all totems without activating them" value="Уничтожьте все тотемы, не активируя их" />
+    <Entry key="Destroy some unactivated and some activated totems" value="Уничтожьте часть тотемов без активации, а часть — после активации" />
+    <Entry key="Emote" value="Жест" />
+    <Entry key="Free Krall Baby then speak to mother at Chillwind Hovel" value="Освободите детёныша кралла и поговорите с его матерью в Хижине холодного ветра" />
+    <Entry key="Get 100 kills using explosion damage" value="Убейте 100 врагов взрывами" />
+    <Entry key="Give Janitor's Watch to Clementine" value="Отдайте часы смотрителя Клементине" />
+    <Entry key="Hardcore" value="Хардкор" />
+    <Entry key="High five emote another player" value="Используйте жест «Дай пять» с другим игроком" />
+    <Entry key="Home" value="База" />
+    <Entry key="Hunter" value="Охотник" />
+    <Entry key="Inflict 100 status effects on enemies" value="Наложите 100 эффектов состояния на врагов" />
+    <Entry key="Item Drop" value="Предмет" />
+    <Entry key="Keep" value="Хранить" />
+    <Entry key="Location" value="Локация" />
+    <Entry key="Loot Beetle" value="Жук с добычей" />
+    <Entry key="Miniboss" value="Мини-босс" />
+    <Entry key="MissingItems" value="Недостающие предметы" />
+    <Entry key="Mod" value="Модификатор" />
+    <Entry key="Name" value="Название" />
+    <Entry key="Normal" value="Обычный режим" />
+    <Entry key="Obtain 25 weapon mods" value="Получите 25 модификаторов оружия" />
+    <Entry key="Pet Wud's dog on Rhom" value="Погладьте собаку Вуда на Роме" />
+    <Entry key="Point of Interest" value="Достопримечательность" />
+    <Entry key="PossibleItems" value="Все предметы" />
+    <Entry key="Progression" value="Персонажи и прогресс" />
+    <Entry key="Purchase 100 items" value="Купите 100 предметов" />
+    <Entry key="Quest Event" value="Событие задания" />
+    <Entry key="Random drop on Corsus" value="Случайная находка на Корсусе" />
+    <Entry key="Random drop on Earth" value="Случайная находка на Земле" />
+    <Entry key="Random drop on Reisum" value="Случайная находка на Рейсаме" />
+    <Entry key="Random drop on Rhom" value="Случайная находка на Роме" />
+    <Entry key="Random drop on Rural Earth" value="Случайная находка в сельской местности Земли" />
+    <Entry key="Random drop on Yaesha" value="Случайная находка на Яэше" />
+    <Entry key="Reward for 10 consecutive boss kills" value="Награда за 10 побед над боссами подряд" />
+    <Entry key="Reward for 100 total boss kills" value="Награда за 100 побед над боссами суммарно" />
+    <Entry key="Reward for 25 total boss kills" value="Награда за 25 побед над боссами суммарно" />
+    <Entry key="Reward for 5 consecutive boss kills" value="Награда за 5 побед над боссами подряд" />
+    <Entry key="Reward for 50 total boss kills" value="Награда за 50 побед над боссами суммарно" />
+    <Entry key="Reward for 75 total boss kills" value="Награда за 75 побед над боссами суммарно" />
+    <Entry key="Reward for completing both campaigns" value="Награда за завершение обеих кампаний" />
+    <Entry key="Reward for defeating Brudvaak and Vargr" value="Награда за победу над Брудвааком и Варгром" />
+    <Entry key="Reward for defeating Clavinger/Harrow" value="Награда за победу над Клавигером или Мучителем" />
+    <Entry key="Reward for defeating Dreamer" value="Награда за победу над Сновидцем" />
+    <Entry key="Reward for defeating Ixillis" value="Награда за победу над Иксиллисом" />
+    <Entry key="Reward for defeating Root Harbinger" value="Награда за победу над Предвестником Корня" />
+    <Entry key="Reward for defeating Singe/Ent" value="Награда за победу над Опалителем или Энтом" />
+    <Entry key="Reward for defeating Totem Father/Ravager" value="Награда за победу над Отцом тотемов или Разорителем" />
+    <Entry key="Reward for defeating all bosses an unknown number of times" value="Награда за победы над всеми боссами; необходимое число побед неизвестно" />
+    <Entry key="Reward for defeating all minibosses twice(?)" value="Награда за две победы над каждым мини-боссом (требует подтверждения)" />
+    <Entry key="Reward for defeating all world bosses twice(?)" value="Награда за две победы над каждым боссом мира (требует подтверждения)" />
+    <Entry key="SaveDate" value="Дата сохранения" />
+    <Entry key="Scrapper" value="Утильщик" />
+    <Entry key="Side Dungeon" value="Побочное подземелье" />
+    <Entry key="Siege" value="Осада" />
+    <Entry key="Survival" value="Выживание" />
+    <Entry key="Trait" value="Талант" />
+    <Entry key="Trinket" value="Украшение" />
+    <Entry key="Type" value="Тип" />
+    <Entry key="Uncategorized" value="Без категории" />
+    <Entry key="Undefined" value="Не определён" />
+    <Entry key="Vault over 50 ledges" value="Перелезьте через 50 уступов" />
+    <Entry key="Weapon" value="Оружие" />
+    <Entry key="World Boss" value="Босс мира" />
+  </Texts>
+  <Items>
+    <Entry key="/Items/Traits/Trait_Luminescent" value="Свечение" />
+    <Entry key="/Items/Trinkets/Trinket_AbrasiveAmulet" value="Абразивный амулет" />
+    <Entry key="/Items/Weapons/Basic/HandGuns/Revolver/Weapon_Revolver" value="Револьвер" />
+    <Entry key="/Items/Trinkets/ScavengersRing" value="Кольцо собирателя" />
+    <Entry key="/Items/Trinkets/BlessedNecklace" value="Благословенное ожерелье" />
+    <Entry key="/Items/Trinkets/AggressorsBane" value="Погибель агрессора" />
+    <Entry key="/Items/Trinkets/Trinket_AlchemistsJewel" value="Камень алхимика" />
+    <Entry key="/Items/Armor/Akari/Armor_Head_Akari" value="Акари (голова)" />
+    <Entry key="/Items/Armor/Akari/Armor_Body_Akari" value="Акари (тело)" />
+    <Entry key="/Items/Armor/Akari/Armor_Legs_Akari" value="Акари (ноги)" />
+    <Entry key="/Items/Trinkets/BackbreakerRing" value="Кольцо костолома" />
+    <Entry key="/Items/Trinkets/BandsOfCastorAndPollux/Trinket_BandOfCastor" value="Кольцо Кастора" />
+    <Entry key="/Items/Trinkets/BandsOfCastorAndPollux/Trinket_BandOfPollux" value="Кольцо Поллукса" />
+    <Entry key="/Items/Trinkets/BandOfStrength" value="Кольцо силы" />
+    <Entry key="/Items/Mods/UnstableQuills" value="Нестабильные иглы" />
+    <Entry key="/Items/Trinkets/HangmansMemento" value="Память палача" />
+    <Entry key="/Items/Mods/BlinkToken" value="Знак телепортации" />
+    <Entry key="/Items/Weapons/Basic/RicochetRifle/Weapon_Pan_RicochetRifle" value="Рикошетная винтовка" />
+    <Entry key="/Items/Trinkets/Trinket_CelerityStone" value="Камень стремительности" />
+    <Entry key="/Items/Mods/Blizzard" value="Метель" />
+    <Entry key="/Items/Trinkets/Trinket_BloodFont" value="Источник крови" />
+    <Entry key="/Items/Mods/ExplosiveShot" value="Разрывной выстрел" />
+    <Entry key="/Items/Armor/Bandit/Armor_Head_Bandit" value="Бандит (голова)" />
+    <Entry key="/Items/Armor/Bandit/Armor_Body_Bandit" value="Бандит (тело)" />
+    <Entry key="/Items/Armor/Bandit/Armor_Legs_Bandit" value="Бандит (ноги)" />
+    <Entry key="/Items/Traits/Trait_ColdAsIce" value="Хладнокровие" />
+    <Entry key="/Items/Trinkets/GIftOfTheIskal" value="Дар Искал" />
+    <Entry key="/Items/Armor/Carapace/Armor_Head_Carapace" value="Панцирь (голова)" />
+    <Entry key="/Items/Armor/Carapace/Armor_Body_Carapace" value="Панцирь (тело)" />
+    <Entry key="/Items/Armor/Carapace/Armor_Legs_Carapace" value="Панцирь (ноги)" />
+    <Entry key="/Items/Trinkets/BrutalMark" value="Жестокая метка" />
+    <Entry key="/Items/Trinkets/BurdenOfTheReckless" value="Бремя безрассудного" />
+    <Entry key="/Items/Trinkets/BurdenOfTheGambler" value="Бремя игрока" />
+    <Entry key="/Items/Trinkets/BurdenOfTheDevoted" value="Бремя преданного" />
+    <Entry key="/Items/Trinkets/Trinket_BurdenOfTheFollower" value="Бремя последователя" />
+    <Entry key="/Items/Trinkets/Trinket_BurdenOfTheWarlord" value="Бремя военачальника" />
+    <Entry key="/Items/Trinkets/ButchersFetish" value="Фетиш мясника" />
+    <Entry key="/Items/Trinkets/CharcoalNecklace" value="Угольное ожерелье" />
+    <Entry key="/Items/Trinkets/CleansingJewel" value="Очищающий камень" />
+    <Entry key="/Items/Trinkets/CompulsionLoop" value="Кольцо принуждения" />
+    <Entry key="/Items/Trinkets/SwashbucklersSignet" value="Перстень сорвиголовы" />
+    <Entry key="/Items/Weapons/Basic/MiniCrossbow/Weapon_MiniCrossbow" value="Двойной выстрел" />
+    <Entry key="/Items/Traits/Trait_Concentration" value="Концентрация" />
+    <Entry key="/Items/Traits/Trait_BloodBond" value="Кровная связь" />
+    <Entry key="/Items/Armor/Armor_Head_Labyrinth" value="Лабиринт (голова)" />
+    <Entry key="/Items/Armor/Armor_Body_Labyrinth" value="Лабиринт (тело)" />
+    <Entry key="/Items/Armor/Armor_Legs_Labyrinth" value="Лабиринт (ноги)" />
+    <Entry key="/Items/Trinkets/DeceiversBand" value="Кольцо обманщика" />
+    <Entry key="/Items/Trinkets/DevouringLoop" value="Пожирающее кольцо" />
+    <Entry key="/Items/Trinkets/Trinket_ScavengersBauble" value="Безделушка собирателя" />
+    <Entry key="/Items/Traits/Trait_Swiftness" value="Стремительность" />
+    <Entry key="/Items/Armor/Drifter/Armor_Head_Drifter" value="Скиталец (голова)" />
+    <Entry key="/Items/Trinkets/DriftStone" value="Парящий камень" />
+    <Entry key="/Items/Trinkets/Trinket_EzlansBand" value="Кольцо Эзлана" />
+    <Entry key="/Items/Weapons/Boss/Devastator/Weapon_Swamp_Devastator" value="Опустошитель" />
+    <Entry key="/Items/Weapons/Boss/ButchersFlail/Weapon_Swamp_ButchersFlail" value="Цеп мясника" />
+    <Entry key="/Items/Traits/Trait_Glutton" value="Обжора" />
+    <Entry key="/Player/Emotes/Emote_Exhausted" value="Изнеможение" />
+    <Entry key="/Items/Trinkets/Trinket_RustedAmulet" value="Ржавый амулет" />
+    <Entry key="/Items/Trinkets/HeartOfDarkness" value="Сердце тьмы" />
+    <Entry key="/Items/Trinkets/HerosRing" value="Кольцо героя" />
+    <Entry key="/Items/Traits/Trait_Fortification" value="Укрепление" />
+    <Entry key="/Items/Trinkets/FiveFingeredRing" value="Пятипалое кольцо" />
+    <Entry key="/Items/Trinkets/Trinket_HeartOfTheWolf" value="Сердце волка" />
+    <Entry key="/Items/Mods/RiftWalker" value="Путник разлома" />
+    <Entry key="/Items/Armor/Drifter/Armor_Body_Drifter" value="Скиталец (тело)" />
+    <Entry key="/Items/Armor/Drifter/Armor_Legs_Drifter" value="Скиталец (ноги)" />
+    <Entry key="/Items/Armor/Scavenger/Armor_Head_Scavenger" value="Собиратель (голова)" />
+    <Entry key="/Items/Armor/Scavenger/Armor_Body_Scavenger" value="Собиратель (тело)" />
+    <Entry key="/Items/Armor/Scavenger/Armor_Legs_Scavenger" value="Собиратель (ноги)" />
+    <Entry key="/Items/Trinkets/Trinket_GalenicCharm" value="Галеновый талисман" />
+    <Entry key="/Items/Trinkets/GrimCoil" value="Мрачная спираль" />
+    <Entry key="/Items/Trinkets/Trinket_RingOfTheUnclean" value="Кольцо Нечистого" />
+    <Entry key="/Items/Traits/Trait_Potency" value="Эффективность" />
+    <Entry key="/Items/Trinkets/GravityStone" value="Камень гравитации" />
+    <Entry key="/Items/Trinkets/Trinket_GunslingersCharm" value="Талисман стрелка" />
+    <Entry key="/Items/Trinkets/Trinket_GunslingersRing" value="Кольцо стрелка" />
+    <Entry key="/Items/Trinkets/HeartSeeker" value="Искатель сердец" />
+    <Entry key="/Items/Trinkets/VanguardRing" value="Кольцо авангарда" />
+    <Entry key="/Items/Mods/HowlersImmunity" value="Защита ревуна" />
+    <Entry key="/Items/Trinkets/HuntersBand" value="Кольцо охотника" />
+    <Entry key="/Items/Trinkets/Trinket_HuntersHalo" value="Ореол охотника" />
+    <Entry key="/Items/Weapons/Basic/HandGuns/HuntingPistol/Weapon_HuntingPistol" value="Охотничий пистолет" />
+    <Entry key="/Items/Traits/Trait_ShadowWalker" value="Теневой странник" />
+    <Entry key="/Items/Trinkets/BandOfDiscord" value="Кольцо раздора" />
+    <Entry key="/Items/Trinkets/RingOfSynergy" value="Кольцо синергии" />
+    <Entry key="/Items/Weapons/Basic/SawedOffShotgun/Weapon_SawedOffShotgun" value="Обрез" />
+    <Entry key="/Items/Armor/Warlord/Armor_Head_Warlord" value="Военачальник (голова)" />
+    <Entry key="/Items/Armor/Warlord/Armor_Body_Warlord" value="Военачальник (тело)" />
+    <Entry key="/Items/Armor/Warlord/Armor_Legs_Warlord" value="Военачальник (ноги)" />
+    <Entry key="/Items/Mods/WildfireShot" value="Огненный выстрел" />
+    <Entry key="/Items/Weapons/Basic/Melee/Weapon_Swamp_Scythe" value="Коса" />
+    <Entry key="/Items/Weapons/Basic/LongGuns/Crossbow/Weapon_Swamp_Crossbow" value="Арбалет" />
+    <Entry key="/Items/Armor/Slayer/Armor_Head_Slayer" value="Убийца (голова)" />
+    <Entry key="/Items/Armor/Slayer/Armor_Body_Slayer" value="Убийца (тело)" />
+    <Entry key="/Items/Armor/Slayer/Armor_Legs_Slayer" value="Убийца (ноги)" />
+    <Entry key="/Items/Trinkets/AmberMoonstone" value="Янтарный лунный камень" />
+    <Entry key="/Items/Trinkets/Trinket_KeepersRing" value="Кольцо хранителя" />
+    <Entry key="/Items/Mods/SongOfSwords" value="Песнь мечей" />
+    <Entry key="/Items/Traits/Trait_Siphoner" value="Поглощение" />
+    <Entry key="/Items/Weapons/Basic/LongGuns/AssaultRifle/Weapon_AssaultRifle" value="Штурмовая винтовка" />
+    <Entry key="/Items/Traits/Trait_Spirit" value="Дух" />
+    <Entry key="/Items/Trinkets/Trinket_LeechEmber" value="Уголь пиявки" />
+    <Entry key="/Items/Weapons/Basic/LongGuns/MachineGun/Weapon_Machinegun" value="Чикагская пишущая машинка" />
+    <Entry key="/Items/Traits/Trait_Warrior" value="Воин" />
+    <Entry key="/Items/QuestItems/TwistedMask/Quest_TwistedMask" value="Искажённая маска (голова)" />
+    <Entry key="/Items/Armor/Void/Armor_Head_Void" value="Пустота (голова)" />
+    <Entry key="/Items/Armor/Void/Armor_Body_Void" value="Пустота (тело)" />
+    <Entry key="/Items/Armor/Void/Armor_Legs_Void" value="Пустота (ноги)" />
+    <Entry key="/Items/Trinkets/Trinket_MothersRing" value="Кольцо матери" />
+    <Entry key="/Quests/Quest_OverworldPOI_MudTooth/Quest_BrabusPocketWatch" value="Карманные часы Брабуса" />
+    <Entry key="/Items/Trinkets/JewelOfTheBlackSun" value="Камень Чёрного солнца" />
+    <Entry key="/Items/Trinkets/MendersCharm" value="Талисман целителя" />
+    <Entry key="/Items/Armor/Osseous/Armor_Head_Osseous" value="Костяной (голова)" />
+    <Entry key="/Items/Armor/Osseous/Armor_Body_Osseous" value="Костяной (тело)" />
+    <Entry key="/Items/Armor/Osseous/Armor_Legs_Osseous" value="Костяной (ноги)" />
+    <Entry key="/Items/Mods/IronSentinel" value="Железный страж" />
+    <Entry key="/Items/Mods/VeryGoodBoy" value="Очень хороший мальчик" />
+    <Entry key="/Items/Trinkets/Trinket_PearlOfLuminescence" value="Светящаяся жемчужина" />
+    <Entry key="/Items/Trinkets/Trinket_LetosAmulet" value="Амулет Лето" />
+    <Entry key="/Items/Trinkets/Trinket_PillarOfStone" value="Каменный столп" />
+    <Entry key="/Items/Trinkets/PolishedWhetstone" value="Полированный точильный камень" />
+    <Entry key="/Items/Weapons/Boss/PrideOfTheIskal/Weapon_Swamp_PrideOfTheIskal" value="Гордость Искал" />
+    <Entry key="/Items/Traits/Trait_Footwork" value="Работа ног" />
+    <Entry key="/Items/Mods/Seeker" value="Искатель" />
+    <Entry key="/Items/Trinkets/RadioactiveEmber" value="Радиоактивный уголь" />
+    <Entry key="/Items/Traits/Trait_HardCharger" value="Неудержимый натиск" />
+    <Entry key="/Items/Weapons/Boss/Alternator/Weapon_Snow_Alternator" value="Генератор" />
+    <Entry key="/Items/Weapons/Boss/ChainBlade/Weapon_Snow_ChainBlade" value="Цепной клинок" />
+    <Entry key="/Items/Trinkets/Razorstone" value="Острый камень" />
+    <Entry key="/Items/Trinkets/RazorwireNecklace" value="Ожерелье из колючей проволоки" />
+    <Entry key="/Items/Traits/Trait_Scavenger" value="Собиратель" />
+    <Entry key="/Items/Trinkets/RestrictionCord" value="Ограничивающий шнур" />
+    <Entry key="/Items/Trinkets/RingOfElusion" value="Кольцо ускользания" />
+    <Entry key="/Items/Trinkets/Trinket_RingOfEvasion" value="Кольцо уклонения" />
+    <Entry key="/Items/Trinkets/RockOfAnguish" value="Камень страдания" />
+    <Entry key="/Items/Trinkets/Trinket_RingOfShadows" value="Кольцо теней" />
+    <Entry key="/Items/Mods/MantleOfThorns" value="Покров шипов" />
+    <Entry key="/Items/Trinkets/BraidedThorns" value="Переплетённые шипы" />
+    <Entry key="/Items/Trinkets/Trinket_RootCirclet" value="Венец Корня" />
+    <Entry key="/Items/Weapons/Boss/Root_Spitfire/Weapon_Root_Spitfire" value="Огнемёт" />
+    <Entry key="/Items/Weapons/Boss/Root_Smolder/Weapon_Root_Smolder" value="Тление" />
+    <Entry key="/Player/Emotes/Emote_Beckon" value="Подозвать" />
+    <Entry key="/Items/Traits/Trait_MothersBlessing" value="Благословение матери" />
+    <Entry key="/Items/Weapons/Basic/LongGuns/SniperRifle/Weapon_SniperRifle" value="Снайперская винтовка" />
+    <Entry key="/Items/Mods/SeedCaller" value="Призыв сеятеля" />
+    <Entry key="/Items/Mods/Rattleweed" value="Гремучий сорняк" />
+    <Entry key="/Items/Weapons/Boss/Root_SporeLauncher/Weapon_Root_SporeLauncher" value="Споровик" />
+    <Entry key="/Items/Weapons/Boss/Root_PetrifiedMaul/Weapon_Root_PetrifiedMaul" value="Окаменевший молот" />
+    <Entry key="/Items/Traits/Trait_QuickHands" value="Ловкие руки" />
+    <Entry key="/Player/Emotes/Emote_Cheer" value="Ликование" />
+    <Entry key="/Items/Armor/Twisted/Armor_Head_Twisted" value="Искажённый (голова)" />
+    <Entry key="/Items/Armor/Twisted/Armor_Body_Twisted" value="Искажённый (тело)" />
+    <Entry key="/Items/Armor/Twisted/Armor_Legs_Twisted" value="Искажённый (ноги)" />
+    <Entry key="/Items/Trinkets/Trinket_Sagestone" value="Камень мудреца" />
+    <Entry key="/Items/Mods/Beckon" value="Призыв" />
+    <Entry key="/Items/Trinkets/SerpentsFang" value="Клык змеи" />
+    <Entry key="/Items/Trinkets/Trinket_PrismaticDiamondRing" value="Кольцо с призматическим алмазом" />
+    <Entry key="/Items/Mods/FrozenMist" value="Ледяной туман" />
+    <Entry key="/Items/Trinkets/Trinket_IskalHunterBand" value="Кольцо охотника Искал" />
+    <Entry key="/Items/Trinkets/AmuletOfEpicaricacy" value="Амулет злорадства" />
+    <Entry key="/Items/Trinkets/RingOfTheMantis" value="Кольцо богомола" />
+    <Entry key="/Items/Traits/Trait_Triage" value="Первая помощь" />
+    <Entry key="/Items/Mods/CorrosiveAura" value="Разъедающая аура" />
+    <Entry key="/Items/Traits/Trait_Catalyst" value="Катализатор" />
+    <Entry key="/Items/Trinkets/SoulLink" value="Связь душ" />
+    <Entry key="/Items/Trinkets/Trinket_SpiritStone" value="Камень духа" />
+    <Entry key="/Items/Armor/Leto/Armor_Head_Leto" value="Лето (голова)" />
+    <Entry key="/Items/Armor/Leto/Armor_Body_Leto" value="Лето (тело)" />
+    <Entry key="/Items/Armor/Leto/Armor_Legs_Leto" value="Лето (ноги)" />
+    <Entry key="/Items/Mods/FlickerCloak" value="Мерцающий покров" />
+    <Entry key="/Items/Trinkets/Trinket_StalkersBrand" value="Метка преследователя" />
+    <Entry key="/Items/Trinkets/Trinket_StockpileCirclet" value="Кольцо запасов" />
+    <Entry key="/Items/Trinkets/Trinket_StoneOfBalance" value="Камень равновесия" />
+    <Entry key="/Items/Trinkets/Trinket_StormAmulet" value="Амулет бури" />
+    <Entry key="/Items/Mods/StormCaller" value="Призыв бури" />
+    <Entry key="/Items/Weapons/Basic/Spear/Weapon_Pan_Spear" value="Копьё" />
+    <Entry key="/Items/Armor/Radiant/Armor_Legs_Radiant" value="Сияющий (ноги)" />
+    <Entry key="/Items/Armor/Radiant/Armor_Body_Radiant" value="Сияющий (тело)" />
+    <Entry key="/Items/Armor/Radiant/Armor_Head_Radiant" value="Сияющий (голова)" />
+    <Entry key="/Items/Trinkets/Trinket_GuardiansRing" value="Кольцо стража" />
+    <Entry key="/Items/Traits/Trait_GuardiansBlessing" value="Благословение стража" />
+    <Entry key="/Items/Weapons/Boss/HiveCannon/Weapon_Swamp_HiveCannon" value="Пушка-улей" />
+    <Entry key="/Items/Weapons/Boss/GuardianAxe/Weapon_Swamp_GuardianAxe" value="Топор стража" />
+    <Entry key="/Items/Traits/Trait_Executioner" value="Палач" />
+    <Entry key="/Player/Emotes/Emote_Confused" value="Недоумение" />
+    <Entry key="/Items/Mods/BreathOfDesert" value="Дыхание пустыни" />
+    <Entry key="/Items/Trinkets/TalismanOfAnimosity" value="Талисман вражды" />
+    <Entry key="/Items/Trinkets/TalismanOfPerseverance" value="Талисман упорства" />
+    <Entry key="/Items/Trinkets/TerrorMargin" value="Грань ужаса" />
+    <Entry key="/Items/Weapons/Basic/Wasteland_Flail/Weapon_Wasteland_Flail" value="Цеп пустошей" />
+    <Entry key="/Items/Weapons/Boss/Defiler/Weapon_Wasteland_Defiler" value="Осквернитель" />
+    <Entry key="/Items/Weapons/Boss/LostHarpoon/Weapon_Wasteland_LostHarpoon" value="Потерянный гарпун" />
+    <Entry key="/Player/Emotes/Emote_Fail" value="Неудача" />
+    <Entry key="/Items/Mods/ColdSpear" value="Ледяное копьё" />
+    <Entry key="/Items/Weapons/Basic/Wasteland_BeamRifle/Weapon_Wasteland_BeamRifle" value="Лучевая винтовка" />
+    <Entry key="/Items/Trinkets/SoulAnchor" value="Якорь души" />
+    <Entry key="/Items/Traits/Trait_ArcaneStrike" value="Магический удар" />
+    <Entry key="/Items/Weapons/Boss/Pan_EyeOfTheStorm/Weapon_Pan_EyeOfTheStorm" value="Око бури" />
+    <Entry key="/Items/Weapons/Boss/Pan_VoiceOfTheTempest/Weapon_Pan_VoiceOfTheTempest" value="Голос бури" />
+    <Entry key="/Player/Emotes/Emote_TeaTime" value="Чаепитие" />
+    <Entry key="/Items/Mods/Swarm" value="Рой" />
+    <Entry key="/Items/Weapons/Boss/Ruin/Weapon_Wasteland_Ruin" value="Разорение" />
+    <Entry key="/Items/Traits/Trait_Kingslayer" value="Цареубийца" />
+    <Entry key="/Items/Weapons/Boss/Riven/Weapon_Wasteland_Riven" value="Разрыватель" />
+    <Entry key="/Player/Emotes/Emote_Gravedigger" value="Могильщик" />
+    <Entry key="/Items/Mods/FanOfKnives" value="Веер ножей" />
+    <Entry key="/Items/Weapons/Boss/Frostborne/Weapon_Frostborne" value="Рождённый морозом" />
+    <Entry key="/Items/Trinkets/VengeanceIdol" value="Идол мести" />
+    <Entry key="/Items/Traits/Trait_Exploiter" value="Эксплуататор" />
+    <Entry key="/Items/Traits/Trait_Handling" value="Обращение с оружием" />
+    <Entry key="/Items/Traits/Trait_KeepersBlessing" value="Благословение хранителя" />
+    <Entry key="/Items/Traits/Trait_RapidStrike" value="Быстрый удар" />
+    <Entry key="/Items/Traits/Trait_Revivalist" value="Реаниматор" />
+    <Entry key="/Items/Traits/Trait_SleightOfHand" value="Ловкость рук" />
+    <Entry key="/Items/Traits/Trait_Suspicion" value="Подозрительность" />
+    <Entry key="/Items/Traits/Trait_Teamwork" value="Командная работа" />
+    <Entry key="/Items/Traits/Trait_TriggerHappy" value="Скорострельность" />
+    <Entry key="/Items/Traits/Trait_WillToLive" value="Воля к жизни" />
+    <Entry key="/Items/Traits/Trait_WorldWalker" value="Странник миров" />
+    <Entry key="/Items/Traits/Trait_Invoker" value="Заклинатель" />
+    <Entry key="/Items/Traits/Trait_FlashCaster" value="Быстрое сотворение" />
+    <Entry key="/Items/Traits/Trait_Climber" value="Скалолаз" />
+    <Entry key="/Items/Traits/Trait_ArmorPiercer" value="Бронебойность" />
+    <Entry key="/Items/Traits/Trait_Demolitionist" value="Подрывник" />
+    <Entry key="/Items/Traits/Trait_Tormentor" value="Мучитель" />
+    <Entry key="/Items/Traits/Trait_Vaccine" value="Вакцина" />
+    <Entry key="/Player/Emotes/Emote_Wave" value="Приветствие" />
+    <Entry key="/Items/Armor/Adventurer/Armor_Head_Adventurer" value="Искатель приключений (голова)" />
+    <Entry key="/Items/Weapons/Human/Melee/Sword/Weapon_HerosSword" value="Меч героя" />
+    <Entry key="/Items/Trinkets/Trinket_LoopOfProsperity" value="Кольцо процветания" />
+    <Entry key="/Items/Trinkets/DaredevilsCharm" value="Талисман смельчака" />
+    <Entry key="/Items/Trinkets/BlackRose" value="Чёрная роза" />
+    <Entry key="/Items/Trinkets/BlackCatBand" value="Кольцо чёрной кошки" />
+    <Entry key="/Items/Trinkets/BrightSteelRing" value="Кольцо сияющей стали" />
+    <Entry key="/Items/Trinkets/WhiteRose" value="Белая роза" />
+    <Entry key="/Items/Trinkets/RingOfFlawlessBeauty" value="Кольцо безупречной красоты" />
+    <Entry key="/Items/Trinkets/AkariWarBand" value="Боевое кольцо Акари" />
+    <Entry key="/Items/Trinkets/Trinket_EmpoweringLoop" value="Усиливающее кольцо" />
+    <Entry key="/Items/Trinkets/Trinket_ProvisionerRing" value="Кольцо снабженца" />
+    <Entry key="/Items/Trinkets/RingOfSumpremacy" value="Кольцо превосходства" />
+    <Entry key="/Items/Trinkets/Trinket_NightmareSpiral" value="Спираль кошмара" />
+    <Entry key="/Player/Emotes/Emote_HighFive" value="Дай пять" />
+    <Entry key="/Items/Trinkets/Trinket_BandOfAccord" value="Кольцо согласия" />
+    <Entry key="/Items/Trinkets/RingOfThePunisher" value="Кольцо карателя" />
+    <Entry key="/Items/Trinkets/ShatteredVertebrae" value="Раздробленные позвонки" />
+    <Entry key="/Items/Trinkets/OnyxPendulum" value="Ониксовый маятник" />
+    <Entry key="/Items/Trinkets/VolatileGem" value="Нестабильный камень" />
+    <Entry key="/Items/Mods/VeilOfTheBlackTear" value="Покров Чёрной слезы" />
+    <Entry key="/Items/Trinkets/Trinket_TwistedIdol" value="Искажённый идол" />
+    <Entry key="/Items/Traits/Trait_BarkSkin" value="Кора" />
+    <Entry key="/Items/Weapons/Basic/LongGuns/Coachgun/Weapon_Coachgun" value="Двустволка" />
+    <Entry key="/Items/Weapons/Human/Melee/Hatchet/Weapon_Hatchet" value="Топорик" />
+    <Entry key="/Items/Armor/Cultist/Armor_Body_Cultist" value="Культист (тело)" />
+    <Entry key="/Items/Armor/Cultist/Armor_Head_Cultist" value="Культист (голова)" />
+    <Entry key="/Items/Armor/Cultist/Armor_Legs_Cultist" value="Культист (ноги)" />
+    <Entry key="/Items/Weapons/Basic/LongGuns/HuntingRifle/Weapon_HuntingRifle" value="Охотничья винтовка" />
+    <Entry key="/Items/Weapons/Human/Melee/Sword/Weapon_Sword" value="Меч" />
+    <Entry key="/Items/Armor/Hunter/Armor_Body_Hunter" value="Охотник (тело)" />
+    <Entry key="/Items/Armor/Hunter/Armor_Head_Hunter" value="Охотник (голова)" />
+    <Entry key="/Items/Armor/Hunter/Armor_Legs_Hunter" value="Охотник (ноги)" />
+    <Entry key="/Items/Weapons/Basic/LongGuns/Shotgun/Weapon_Shotgun" value="Дробовик" />
+    <Entry key="/Items/Armor/Scrapper/Armor_Body_Scrapper" value="Утильщик (тело)" />
+    <Entry key="/Items/Armor/Scrapper/Armor_Head_Scrapper" value="Утильщик (голова)" />
+    <Entry key="/Items/Armor/Scrapper/Armor_Legs_Scrapper" value="Утильщик (ноги)" />
+    <Entry key="/Items/Weapons/Human/Melee/Hammer/Weapon_Hammer" value="Молот" />
+    <Entry key="/Items/Traits/Trait_ElderKnowledge" value="Знания старейшин" />
+    <Entry key="/Items/Weapons/Basic/HandGuns/SubMachineGun/Weapon_Submachinegun" value="Пистолет-пулемёт" />
+    <Entry key="/Items/Trinkets/RingOfTheAdmiral" value="Кольцо адмирала" />
+    <Entry key="/Items/Weapons/Boss/Guns/LongGuns/Repulsor/Weapon_Atoll_Repulsor" value="Репульсор" />
+    <Entry key="/Items/Traits/Trait_MindsEye" value="Внутреннее око" />
+    <Entry key="/Player/Emotes/Emote_PraiseTheGun" value="Хвала оружию" />
+    <Entry key="/Items/Weapons/Boss/FusionRifle/Weapon_Rural_FusionRifle" value="Термоядерная винтовка" />
+    <Entry key="/Items/Weapons/Boss/WorldsEdge/Weapon_Rural_WorldsEdge" value="Край мира" />
+    <Entry key="/Items/Traits/Trait_LastResort" value="Последний шанс" />
+    <Entry key="/Items/Weapons/Basic/MachinePistol/Weapon_MachinePistol" value="Автоматический пистолет" />
+    <Entry key="/Items/Trinkets/Trinket_RingOfHonor" value="Кольцо чести" />
+    <Entry key="/Items/Traits/Trait_Wisdom" value="Мудрость" />
+    <Entry key="/Items/Trinkets/BloodlettersInsignia" value="Знак кровопускателя" />
+    <Entry key="/Items/Trinkets/JuggernautBand" value="Кольцо джаггернаута" />
+    <Entry key="/Items/Trinkets/Trinket_EvokersSeal" value="Печать заклинателя" />
+    <Entry key="/Items/Trinkets/VulcansDetonator" value="Детонатор Вулкана" />
+    <Entry key="/Items/Trinkets/SoulEmber" value="Уголь души" />
+    <Entry key="/Items/Traits/Trait_Evocation" value="Сотворение" />
+    <Entry key="/Items/Weapons/Boss/WorldBreaker/Weapon_Wasteland_WorldBreaker" value="Сокрушитель миров" />
+    <Entry key="/Items/Weapons/Boss/ParticleAccelerator/Weapon_Wasteland_ParticleAccelerator" value="Ускоритель частиц" />
+    <Entry key="/Items/Traits/Trait_Recovery" value="Восстановление" />
+    <Entry key="/Player/Emotes/Emote_Laugh" value="Смех" />
+    <Entry key="/Items/Weapons/Boss/Pan_CurseOfTheJungleGod/Weapon_Pan_CurseOfTheJungleGod" value="Проклятие бога джунглей" />
+    <Entry key="/Items/Weapons/Boss/Pan_ScarOfTheJungleGod/Weapon_Pan_ScarOfTheJungleGod" value="Шрам бога джунглей" />
+    <Entry key="/Player/Emotes/Emote_FreezeFrame" value="Стоп-кадр" />
+    <Entry key="/Items/Armor/Elder/Armor_Head_Elder" value="Старейшина (голова)" />
+    <Entry key="/Items/Armor/Elder/Armor_Body_Elder" value="Старейшина (тело)" />
+    <Entry key="/Items/Armor/Elder/Armor_Legs_Elder" value="Старейшина (ноги)" />
+    <Entry key="/UnknownPotentialLoot" value="Возможная добыча неизвестна" />
+  </Items>
+</Localization>

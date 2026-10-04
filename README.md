@@ -1,16 +1,21 @@
-# Remnant Save Manager
-**Note: If you're looking for a similiar tool for Remnant 2, check out [Remnant Save Guardian](https://github.com/Razzmatazzz/RemnantSaveGuardian).**
+﻿# Remnant Save Manager — русская версия
 
-Remnant Save Manager allows you to easily backup and restore your Remnant: From the Ashes save files. It can also monitor your Remnant save file for changes, and automatically create backups.
+**Если вам нужна похожая программа для Remnant 2, обратите внимание на [Remnant Save Guardian](https://github.com/Razzmatazzz/RemnantSaveGuardian).**
 
-You can also analyze the world to see what events rolled for your campaign or adventure mode.
+Remnant Save Manager позволяет удобно создавать резервные копии и восстанавливать сохранения **Remnant: From the Ashes**. Программа также может следить за изменениями файлов сохранений и автоматически создавать резервные копии.
 
-Download the latest .exe from the [Releases page](https://github.com/Razzmatazzz/RemnantSaveManager/releases).
+Анализатор мира показывает, какие события выпали в вашей кампании или в режиме приключения, а также какие предметы доступны и каких предметов не хватает персонажу.
 
-For an explanation of the interface, check out [the wiki](https://github.com/Razzmatazzz/RemnantSaveManager/wiki).
+В этой версии интерфейс, игровые данные из комплектного справочника и экспорт отчётов переведены на русский язык. Перевод встроен в EXE и работает в скомпилированной программе.
 
-Requires [.NET Framework 4.7.2 Runtime](https://dotnet.microsoft.com/download/dotnet-framework/net472).
+Скачайте последнюю русскую сборку на [странице Releases](https://github.com/PavelZagumenkin/RemnantSaveManager_Razzmatazzz_RU/releases/latest). Рекомендуется ZIP: распакуйте его и запустите `RemnantSaveManager.exe`. В релизе также доступен отдельный EXE.
 
-Credit to hzla for the [original online world analyzer](https://hzla.github.io/Remnant-World-Analyzer/).
+Объяснение интерфейса можно найти в [вики оригинального проекта](https://github.com/Razzmatazzz/RemnantSaveManager/wiki) на английском языке. [Русская инструкция](README.ru.md) содержит сведения о запуске, переводе и сборке из исходников.
 
-Also credit to the folks on the official Remnant discord for chasing down items. If you're looking for info on how to get the Swamps of Corsus DLC items, check out [this spreadsheet](https://docs.google.com/spreadsheets/d/1AmM7c4lhXQYTMbqKH2ZssDONsS9X-r7j6_SaC9HhTUg/edit#gid=0).
+Требуется [.NET Framework 4.7.2 Runtime](https://dotnet.microsoft.com/download/dotnet-framework/net472) или новее.
+
+Русская версия основана на [Remnant Save Manager](https://github.com/Razzmatazzz/RemnantSaveManager) от **Razzmatazzz**. Исходная история разработки и [лицензия GPL-3.0](LICENSE) сохранены.
+
+Спасибо **hzla** за [оригинальный онлайн-анализатор мира](https://hzla.github.io/Remnant-World-Analyzer/).
+
+Также спасибо участникам официального Discord Remnant за поиск информации о предметах. Сведения о получении предметов из дополнения **Swamps of Corsus** доступны в [этой таблице](https://docs.google.com/spreadsheets/d/1AmM7c4lhXQYTMbqKH2ZssDONsS9X-r7j6_SaC9HhTUg/edit#gid=0).

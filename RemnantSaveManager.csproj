@@ -97,6 +97,7 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="GameInfo.cs" />
+    <Compile Include="Localization.cs" />
     <Compile Include="RemnantItem.cs" />
     <Compile Include="RemnantSave.cs" />
     <Compile Include="RestoreDialog.xaml.cs">
@@ -177,7 +178,17 @@
     <Resource Include="Resources\StatusSecurityWarning_32x.png" />
     <Resource Include="Resources\ZoomOut_16x.png" />
     <Resource Include="Resources\ZoomIn_16x.png" />
-    <Content Include="Resources\GameInfo.xml" />
+    <Content Include="Resources\GameInfo.xml">
+      <Link>GameInfo.xml</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <EmbeddedResource Include="Resources\GameInfo.xml">
+      <LogicalName>RemnantSaveManager.GameInfo.xml</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\RussianLocalization.xml">
+      <LogicalName>RemnantSaveManager.Localization.ru.xml</LogicalName>
+      <WithCulture>false</WithCulture>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
@@ -198,11 +209,5 @@
     <Resource Include="Resources\SearchMember_32x.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <PropertyGroup>
-    <PostBuildEvent>copy "$(ProjectDir)Resources\GameInfo.xml" "$(TargetDir)"
-copy "$(ProjectDir)Resources\GameInfo.xml" "$(TargetDir)app.publish\"</PostBuildEvent>
-  </PropertyGroup>
-  <PropertyGroup>
-    <PreBuildEvent>RD /S /Q "$(TargetDir)app.publish\"</PreBuildEvent>
-  </PropertyGroup>
+
 </Project>

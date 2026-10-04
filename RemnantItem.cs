@@ -60,7 +60,7 @@ namespace RemnantSaveManager
                 }
                 catch (Exception ex)
                 {
-                    Console.WriteLine("Error processing item name: " + ex.Message);
+                    Console.WriteLine("Ошибка обработки названия предмета: " + ex.Message);
                     itemName = value;
                 }
             } 
@@ -70,14 +70,25 @@ namespace RemnantSaveManager
         { 
             get 
             {
-                if (itemAltName != null) return itemAltName;
-                return itemName; 
+                return Localization.ItemName(itemKey);
             } 
         }
-        public string ItemType { get { return itemType; } }
+        public string ItemType { get { return Localization.Text(itemType); } }
         public RemnantItemMode ItemMode { get; set; }
-        public string ItemNotes { get; set; }
+        private string itemNotes;
+        public string ItemNotes { get { return Localization.Text(itemNotes); } set { itemNotes = value; } }
         public string ItemAltName { get { return itemAltName; } set { itemAltName = value; } }
+
+        // Keep the English title for the original wiki, independently of display text.
+        public string WikiName
+        {
+            get
+            {
+                string name = itemAltName ?? itemName;
+                if (itemType == "Armor" && name.Contains("(")) name = name.Substring(0, name.IndexOf("(")).Trim() + " Set";
+                return name;
+            }
+        }
 
         public RemnantItem(string key)
         {
@@ -100,7 +111,7 @@ namespace RemnantSaveManager
 
         public override string ToString()
         {
-            return itemType + ": " + ItemName;
+            return ItemType + ": " + ItemName;
         }
 
         public override bool Equals(Object obj)

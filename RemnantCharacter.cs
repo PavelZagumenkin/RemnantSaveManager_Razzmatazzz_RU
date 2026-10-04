@@ -10,7 +10,8 @@ namespace RemnantSaveManager
 {
     public class RemnantCharacter
     {
-        public string Archetype { get; set; }
+        private string archetype;
+        public string Archetype { get { return Localization.Text(archetype); } set { archetype = value; } }
         public List<string> Inventory { get; set; }
         public List<RemnantWorldEvent> CampaignEvents { get; set; }
         public List<RemnantWorldEvent> AdventureEvents { get; set; }
@@ -76,7 +77,7 @@ namespace RemnantSaveManager
                     RemnantWorldEvent.ProcessEvents(this, campaigntext, RemnantWorldEvent.ProcessMode.Subject2923);
                 } else
                 {
-                    Console.WriteLine("Campaign not found; likely in tutorial mission.");
+                    Console.WriteLine("Кампания не найдена; возможно, идёт обучение.");
                 }
             }
 
@@ -222,9 +223,9 @@ namespace RemnantSaveManager
             }
             catch (IOException ex)
             {
-                if (ex.Message.Contains("being used by another process"))
+                if (((ex.HResult & 0xFFFF) == 32 || (ex.HResult & 0xFFFF) == 33))
                 {
-                    Console.WriteLine("Save file in use; waiting 0.5 seconds and retrying.");
+                    Console.WriteLine("Файл сохранения занят; повторная попытка через 0,5 секунды.");
                     System.Threading.Thread.Sleep(500);
                     charData = GetCharactersFromSave(remnantSave, mode);
                 }
@@ -247,16 +248,16 @@ namespace RemnantSaveManager
                         }
                         catch (IOException ex)
                         {
-                            if (ex.Message.Contains("being used by another process"))
+                            if (((ex.HResult & 0xFFFF) == 32 || (ex.HResult & 0xFFFF) == 33))
                             {
-                                Console.WriteLine("Save file in use; waiting 0.5 seconds and retrying.");
+                                Console.WriteLine("Файл сохранения занят; повторная попытка через 0,5 секунды.");
                                 System.Threading.Thread.Sleep(500);
                                 LoadWorldData(charIndex);
                             }
                         }
                         catch (Exception ex)
                         {
-                            Console.WriteLine("Error loading world Data: ");
+                            Console.WriteLine("Ошибка загрузки данных мира: ");
                             Console.WriteLine("\tCharacterData.LoadWorldData");
                             Console.WriteLine("\t"+ex.ToString());
                         }

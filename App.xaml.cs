@@ -21,7 +21,10 @@ namespace RemnantSaveManager
     {
         private void OnStartup(object sender, StartupEventArgs e)
         {
-            var culture = CultureInfo.CurrentCulture;
+            var culture = CultureInfo.GetCultureInfo("ru-RU");
+            CultureInfo.DefaultThreadCurrentCulture = culture;
+            CultureInfo.DefaultThreadCurrentUICulture = culture;
+            Thread.CurrentThread.CurrentUICulture = culture;
             Thread.CurrentThread.CurrentCulture = culture;
             FrameworkElement.LanguageProperty.OverrideMetadata(
                 typeof(FrameworkElement),
