@@ -1,5 +1,9 @@
 # Remnant Save Manager — русская версия
 
+Независимая русская локализация Remnant Save Manager. Исходный проект — [Razzmatazzz/RemnantSaveManager](https://github.com/Razzmatazzz/RemnantSaveManager).
+
+Перевод интерфейса, русская документация и сборки — **PavelZagumenkin**. Этот репозиторий поддерживается отдельно от исходного проекта.
+
 **Если вам нужна похожая программа для Remnant 2, обратите внимание на [Remnant Save Guardian](https://github.com/Razzmatazzz/RemnantSaveGuardian).**
 
 Remnant Save Manager позволяет удобно создавать резервные копии и восстанавливать сохранения **Remnant: From the Ashes**. Программа также может следить за изменениями файлов сохранений и автоматически создавать резервные копии.
@@ -14,4 +18,4 @@ Remnant Save Manager позволяет удобно создавать резе
 
 Требуется [.NET Framework 4.7.2 Runtime](https://dotnet.microsoft.com/download/dotnet-framework/net472) или новее.
 
-Русская версия основана на [Remnant Save Manager](https://github.com/Razzmatazzz/RemnantSaveManager) от **Razzmatazzz**. Исходная история разработки и [лицензия GPL-3.0](LICENSE) сохранены.
+Исходная история разработки и [лицензия GPL-3.0](LICENSE) сохранены.
