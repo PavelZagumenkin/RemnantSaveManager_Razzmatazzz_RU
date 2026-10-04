@@ -1,0 +1,1 @@
+[Русские релизы](https://github.com/PavelZagumenkin/RemnantSaveManager_Razzmatazzz_RU/releases/latest) · [Исходный код](https://github.com/PavelZagumenkin/RemnantSaveManager_Razzmatazzz_RU) · [GPL-3.0](https://github.com/PavelZagumenkin/RemnantSaveManager_Razzmatazzz_RU/blob/main/LICENSE)

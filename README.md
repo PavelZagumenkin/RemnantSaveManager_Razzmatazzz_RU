@@ -1,4 +1,4 @@
-﻿# Remnant Save Manager — русская версия
+# Remnant Save Manager — русская версия
 
 **Если вам нужна похожая программа для Remnant 2, обратите внимание на [Remnant Save Guardian](https://github.com/Razzmatazzz/RemnantSaveGuardian).**
 
@@ -10,12 +10,8 @@ Remnant Save Manager позволяет удобно создавать резе
 
 Скачайте последнюю русскую сборку на [странице Releases](https://github.com/PavelZagumenkin/RemnantSaveManager_Razzmatazzz_RU/releases/latest). Рекомендуется ZIP: распакуйте его и запустите `RemnantSaveManager.exe`. В релизе также доступен отдельный EXE.
 
-Объяснение интерфейса можно найти в [вики оригинального проекта](https://github.com/Razzmatazzz/RemnantSaveManager/wiki) на английском языке. [Русская инструкция](README.ru.md) содержит сведения о запуске, переводе и сборке из исходников.
+Установка и работа с программой описаны в [русской Wiki](https://github.com/PavelZagumenkin/RemnantSaveManager_Razzmatazzz_RU/wiki). [Копия руководства со снимками интерфейса](docs/wiki/Home.md) также хранится в проекте. [Русская инструкция](README.ru.md) содержит сведения о переводе и сборке из исходников.
 
 Требуется [.NET Framework 4.7.2 Runtime](https://dotnet.microsoft.com/download/dotnet-framework/net472) или новее.
 
 Русская версия основана на [Remnant Save Manager](https://github.com/Razzmatazzz/RemnantSaveManager) от **Razzmatazzz**. Исходная история разработки и [лицензия GPL-3.0](LICENSE) сохранены.
-
-Спасибо **hzla** за [оригинальный онлайн-анализатор мира](https://hzla.github.io/Remnant-World-Analyzer/).
-
-Также спасибо участникам официального Discord Remnant за поиск информации о предметах. Сведения о получении предметов из дополнения **Swamps of Corsus** доступны в [этой таблице](https://docs.google.com/spreadsheets/d/1AmM7c4lhXQYTMbqKH2ZssDONsS9X-r7j6_SaC9HhTUg/edit#gid=0).
